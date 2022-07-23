@@ -27,7 +27,7 @@ local options = {
   scrolloff = 8, -- Number of lines above and below cursor
   cursorline = true, -- Cursorline one
   signcolumn = "yes:1", -- Add extra sign column next to line number
-  pumheight = 10, -- pop up menu height
+  pumheight = 15, -- pop up menu height
 
   -- Tabs, indent
   expandtab = true, -- Use spaces instead of tabs

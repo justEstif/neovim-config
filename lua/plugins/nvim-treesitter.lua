@@ -1,10 +1,3 @@
------------------------------------------------------------
--- Treesitter configuration file
-----------------------------------------------------------
-
--- Plugin: nvim-treesitter
--- url: https://github.com/nvim-treesitter/nvim-treesitter
-
 local status_ok, nvim_treesitter = pcall(require, 'nvim-treesitter.configs')
 if not status_ok then
   return
@@ -22,5 +15,3 @@ nvim_treesitter.setup {
   },
   auto_install = true, -- auto install when missing parsers
 }
-
--- comment parser is for TODO highlighting

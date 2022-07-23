@@ -57,7 +57,7 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-	local ignored_formatters = { "tsserver", "sumneko_lua" }
+	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
 
 	for _, value in ipairs(ignored_formatters) do
 		if value == client.name then
