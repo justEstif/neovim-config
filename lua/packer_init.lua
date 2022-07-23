@@ -68,16 +68,13 @@ return packer.startup(function(use)
   }
 
   use { -- autocomplete
-    'hrsh7th/nvim-cmp',
-    requires = { 'L3MON4D3/LuaSnip', 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-path', 'hrsh7th/cmp-buffer',
-      'saadparwaiz1/cmp_luasnip' }
-  }
-
-  use { -- snippets
-    "rafamadriz/friendly-snippets",
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
-    end
+    'hrsh7th/nvim-cmp', -- cmp plugin
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-path', -- path cmp
+    'hrsh7th/cmp-buffer', -- buffer cmp
+    'saadparwaiz1/cmp_luasnip', -- snippets cmp
+    'L3MON4D3/LuaSnip', -- snippets engine
+    'rafamadriz/friendly-snippets', -- snippets
   }
 
   use { -- dashboard
