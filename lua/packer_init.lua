@@ -116,13 +116,8 @@ return packer.startup(function(use)
 
   use { -- comment
     'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup({})
-    end
+    "JoosepAlviste/nvim-ts-context-commentstring"
   }
-
-  -- comment support
-  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Put this at the end after all plugins
   if packer_bootstrap then
