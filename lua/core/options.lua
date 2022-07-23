@@ -44,19 +44,10 @@ local options = {
   undofile = true, -- enable persistent undo
 }
 
-
+-- Settings Options
 for k, v in pairs(options) do
   opt[k] = v
 end
-
--- Other options
-
--- set words with - and _ as one word
-opt.iskeyword:append("-")
-opt.iskeyword:append("-")
-
--- Disable nvim intro
-opt.shortmess:append "sI"
 
 -- Disable builtins plugins
 local disabled_built_ins = {
@@ -83,3 +74,12 @@ local disabled_built_ins = {
 for _, plugin in pairs(disabled_built_ins) do
   g["loaded_" .. plugin] = 1
 end
+
+
+-- Other options
+opt.iskeyword:append("-") -- set words with - as 1
+opt.iskeyword:append("_") -- set words with _ as 1
+
+-- Disable nvim intro
+opt.shortmess:append "sI"
+

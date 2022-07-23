@@ -33,8 +33,8 @@ map('n', 'J', '}') -- J to jump previous blocks(n)
 map('v', 'J', '}') -- J to jump previous blocks(v)
 map('n', 'K', '{') -- L to jump next blocks(n)
 map('v', 'K', '{') -- L to jump next blocks(v)
-map("n", '"', '%') -- ' to jump to matching closer
-map("v", '"', '%') -- ' to jump to matching bracket
+map("n", '"', '%') -- " to jump to matching closer
+map("v", '"', '%') -- " to jump to matching bracket
 
 map("n", '<A-j>', ":m .+1<CR>==") -- move line up(n)
 map("n", '<A-k>', ":m .-2<CR>==") -- move line down(n)
@@ -42,6 +42,9 @@ map("v", '<A-j>', ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", '<A-k>', ":m '<-2<CR>gv=gv") -- move line down(v)
 map("i", '<A-j>', "<Esc>:m .+1<CR>==gi") -- move line up(i)
 map("i", '<A-k>', "<Esc>:m .-2<CR>==gi") -- move line down(i)
+
+-- when you paste on top of something, hold the initial yanked
+map("v", "p", '"_dP')
 
 -- Window
 map('n', '<C-k>', '<C-w>k') -- window up
@@ -61,6 +64,10 @@ map('n', '<leader>tn', ':tabnext<CR>') -- go to next tab
 map('n', '<leader>tp', ':tabprev<CR>') -- go to prev tab
 map('n', '<leader>tk', ':tabclose<CR>') -- kill current tab
 
+-- Stay in indent mode
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+
 map('n', '<leader>j', 'gJ') -- leader j to join lines(n)
 map('v', '<leader>j', 'gJ') -- leader j to join lines(v)
 
@@ -77,7 +84,7 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -----------------------------------------------------------
 
 -- Terminal mappings
-map('n', '<C-t>', ':Term<CR>', { noremap = true }) -- open
+map('n', '<C-t>', ':Term<CR>') -- open
 map('t', '<Esc>', '<C-\\><C-n>') -- exit
 
 -- NvimTree
@@ -85,7 +92,7 @@ map('n', '<C-n>', ':NvimTreeToggle<CR>') -- open/close
 
 -- Telescope
 map('n', '<leader>bl', ':Telescope buffers<CR>') -- list all buffers
-map("n", "<C-p>", ":Telescope find_files<CR>", { noremap = true }) -- find file
+map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 -- '<leader>bl':  list all buffers; defined in the buffers section
