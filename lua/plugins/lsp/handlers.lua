@@ -2,24 +2,9 @@ local M = {}
 
 -- TODO: backfill this to template
 M.setup = function()
-  local signs = {
-    { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
-    { name = "DiagnosticSignHint", text = "" },
-    { name = "DiagnosticSignInfo", text = "" },
-  }
-
-  for _, sign in ipairs(signs) do
-    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-  end
-
   local config = {
     -- disable virtual text
     virtual_text = false,
-    -- show signs
-    signs = {
-      active = signs,
-    },
     update_in_insert = true,
     underline = true,
     severity_sort = true,
@@ -88,6 +73,21 @@ if not status_ok then
   return
 end
 
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.preselectSupport = true
+capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
+capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
+capabilities.textDocument.completion.completionItem.deprecatedSupport = true
+capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
+capabilities.textDocument.completion.completionItem.tagSupport = {
+  valueSet = { 1 }
+}
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = { 'documentation', 'detail', 'additionalTextEdits' }
+}
+
+M.capabilities = capabilities
 
 return M

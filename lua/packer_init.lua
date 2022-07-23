@@ -66,9 +66,10 @@ return packer.startup(function(use)
     end
   }
 
-  use { -- lsp
+  use { -- lsp/format
     "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
+    "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   }
 
   use { -- completion
