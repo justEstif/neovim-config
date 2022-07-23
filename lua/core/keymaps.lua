@@ -91,7 +91,6 @@ map('t', '<Esc>', '<C-\\><C-n>') -- exit
 map('n', '<C-n>', ':NvimTreeToggle<CR>') -- open/close
 
 -- Telescope
-map('n', '<leader>bl', ':Telescope buffers<CR>') -- list all buffers
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory

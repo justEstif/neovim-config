@@ -26,6 +26,8 @@ end
 telescope.setup {
   defaults = {
     buffer_previewer_maker = new_maker,
+    prompt_prefix = " ",
+    selection_caret = " ",
     mappings = {
       i = {
         ["<C-u>"] = false, -- clear input with C-u
@@ -53,12 +55,14 @@ telescope.setup {
     },
     buffers = {
       theme = "dropdown",
+      previewer = false,
     },
     current_buffer_fuzzy_find = {
-      theme = "dropdown",
+      theme = "cursor",
+      previewer = false,
     },
     live_grep = {
-      -- theme = "dropdown",
+      theme = "dropdown",
     },
   },
 }
