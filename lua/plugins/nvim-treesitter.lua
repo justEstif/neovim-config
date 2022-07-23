@@ -17,7 +17,8 @@ nvim_treesitter.setup {
   },
   sync_install = false,
   highlight = {
-    enable = true,    -- enable extension
+    enable = true, -- enable extension
+    additional_vim_regex_highlighting = true,
   },
   auto_install = true, -- auto install when missing parsers
 }
