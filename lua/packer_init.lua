@@ -38,7 +38,6 @@ packer.init {
 return packer.startup(function(use)
 
   use 'wbthomason/packer.nvim' -- packer
-  use 'neovim/nvim-lspconfig' -- LSP
   use 'kyazdani42/nvim-tree.lua' -- file explorer
   use 'nvim-treesitter/nvim-treesitter' -- Treesitter Interface
   use 'wakatime/vim-wakatime' -- Wakatime
@@ -67,7 +66,12 @@ return packer.startup(function(use)
     end
   }
 
-  use { -- autocomplete
+  use { -- lsp
+    "williamboman/nvim-lsp-installer",
+    "neovim/nvim-lspconfig",
+  }
+
+  use { -- completion
     'hrsh7th/nvim-cmp', -- cmp plugin
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path', -- path cmp

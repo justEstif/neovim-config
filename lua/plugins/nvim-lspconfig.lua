@@ -142,3 +142,4 @@ lspconfig['tailwindcss'].setup {
     }
   }
 }
+
