@@ -26,8 +26,8 @@ end
 telescope.setup {
   defaults = {
     buffer_previewer_maker = new_maker,
-    prompt_prefix = " ",
-    selection_caret = " ",
+    prompt_prefix = "  ",
+    selection_caret = "  ",
     mappings = {
       i = {
         ["<C-u>"] = false, -- clear input with C-u
