@@ -62,7 +62,7 @@ telescope.setup {
       previewer = false,
     },
     live_grep = {
-      theme = "dropdown",
+      theme = "ivy",
     },
   },
 }
