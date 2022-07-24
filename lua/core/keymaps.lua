@@ -12,7 +12,6 @@ local function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- Change leader to a comma
 vim.g.mapleader = ","
 
 -----------------------------------------------------------
@@ -95,14 +94,14 @@ map("t", "<Esc>", "<C-\\><C-n>") -- exit
 -- NvimTree
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 
+-- Hop
+map("n", "ml", "<cmd>HopLineStart<CR>")
+map("n", "s", "<cmd>HopChar2<CR>")
+
 -- Telescope
-map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
-
--- Hop
-map("n", "s", "<cmd>HopPattern<CR>")
-map("n", "ml", "<cmd>HopLineStart<CR>")
+map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 
 -- other keybindings in:
 -- plugins/lsp/handlers
