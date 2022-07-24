@@ -14,3 +14,4 @@
   - <https://github.com/LunarVim/Neovim-from-scratch/>
 
 - Besides the plugin requirements, the lsp is setup to work with neovim 0.8
+- You have to initialize npm or yarn for tssserver to work.

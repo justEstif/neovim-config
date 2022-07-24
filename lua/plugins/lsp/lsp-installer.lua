@@ -5,10 +5,10 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { 'html', 'cssls', 'tsserver', "sumneko_lua", "jsonls", "tailwindcss" }
+local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss" }
 
 lsp_installer.setup({
-	ensure_installed = servers
+	ensure_installed = servers,
 })
 
 for _, server in pairs(servers) do

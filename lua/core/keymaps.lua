@@ -26,10 +26,6 @@ map("", "<right>", "<nop>")
 
 map("i", "jk", "<Esc>") -- map esc to jk
 
--- -- TODO Working on this
-map("i", "<C-l>", "<Esc>$i") -- <C-a> to go the to end of line (i)
-map("i", "<C-h>", "<Esc>_i") -- <C-e> to go the to start of line (i)
-
 map("n", "H", "_") -- H to go the start of line(n)
 map("v", "H", "_") -- H to go the start of line(v)
 map("n", "L", "$") -- L to go to the end of line(n)

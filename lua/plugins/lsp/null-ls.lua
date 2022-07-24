@@ -11,7 +11,7 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	debug = true,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
 		formatting.stylua, -- lua
 		code_actions.eslint, -- js/ts
 		completion.spell, -- spell
