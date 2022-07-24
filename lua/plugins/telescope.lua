@@ -41,7 +41,7 @@ telescope.setup({
 			hidden = true,
 		},
 		buffers = {
-			theme = "dropdown",
+			theme = "cursor",
 			previewer = false,
 		},
 		current_buffer_fuzzy_find = {
@@ -52,9 +52,4 @@ telescope.setup({
 			theme = "ivy",
 		},
 	},
-	extensions = {
-		command_palette = require("plugins.telescope.command-palette"),
-	},
 })
-
-require('telescope').load_extension('command_palette')

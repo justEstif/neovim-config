@@ -25,15 +25,6 @@ if not status_ok then
 	return
 end
 
--- Have packer use a popup window
-packer.init({
-	display = {
-		open_fn = function()
-			return require("packer.util").float({ border = "rounded" })
-		end,
-	},
-})
-
 -- Install plugins
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- packer
@@ -103,7 +94,6 @@ return packer.startup(function(use)
 
 	use({ -- telescope
 		"nvim-telescope/telescope.nvim",
-		"LinArcX/telescope-command-palette.nvim",
 		branch = "0.1.x",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
