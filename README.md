@@ -2,5 +2,7 @@
 - The keymappings are heavily opinionated.
 - Pretty minimal, and it doesn't have which-key.
 
-TODO:
+- TODO:
   - ~~Add folding~~
+  - Add keybindings wrapper
+    - https://github.com/lazytanuki/nvim-mapper
