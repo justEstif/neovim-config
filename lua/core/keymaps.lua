@@ -2,14 +2,14 @@
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
 local function map(mode, lhs, rhs, opts)
-    local options = {
-        noremap = true,
-        silent = true
-    }
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	local options = {
+		noremap = true,
+		silent = true,
+	}
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- Change leader to a comma
@@ -76,11 +76,9 @@ map("v", ">", ">gv")
 map("n", "<leader>j", "gJ") -- leader j to join lines(n)
 map("v", "<leader>j", "gJ") -- leader j to join lines(v)
 
-map("n", "<Esc>", ":nohl<CR>") -- clear highlights with esc
-
+map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>s", ":w<CR>") -- save file
-map("n", "<leader>c", ":nohl<CR>") -- clear search highlights
-map("n", "<leader>r", ":so $MYVIMRC<CR>") -- Reload configuration without restart nvim
+map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "<leader>q", ":qa!<CR>") -- force exit
 
 -- gx to open link under cursor
