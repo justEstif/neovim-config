@@ -27,19 +27,47 @@ end
 
 -- Install plugins
 return packer.startup(function(use)
-	use("wbthomason/packer.nvim") -- packer
-	use("kyazdani42/nvim-tree.lua") -- file explorer
-	use("nvim-treesitter/nvim-treesitter") -- Treesitter Interface
-	use("wakatime/vim-wakatime") -- Wakatime
+	use({
+		"wbthomason/packer.nvim", -- plugin manager
+		"nvim-lua/plenary.nvim", -- important package used by most
+		"nvim-treesitter/nvim-treesitter", -- code highlighting
+	})
 
-	use("lukas-reineke/indent-blankline.nvim") -- indent line
-	use("kyazdani42/nvim-web-devicons") -- Icons
-	use("navarasu/onedark.nvim") -- colorschemes: onedark
+	use({ -- lsp/formating
+		"neovim/nvim-lspconfig", -- nvim native lsp
+		"williamboman/nvim-lsp-installer", -- lsp  installer
+		"jose-elias-alvarez/null-ls.nvim", -- formatter
+	})
 
-	use({ -- statusline
-		"feline-nvim/feline.nvim",
+	use({ -- completion/cmp
+		"hrsh7th/nvim-cmp", -- cmp plugin
+		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
+		"hrsh7th/cmp-path", -- path cmp
+		"hrsh7th/cmp-buffer", -- buffer cmp
+		"saadparwaiz1/cmp_luasnip", -- snippets cmp
+		"L3MON4D3/LuaSnip", -- snippets engine
+		"rafamadriz/friendly-snippets", -- snippets
+	})
+
+	use({ -- telescope
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+
+	use({ -- comment
+		"numToStr/Comment.nvim",
+		"JoosepAlviste/nvim-ts-context-commentstring",
+	})
+
+	use({
+		"kyazdani42/nvim-tree.lua", -- file explorer
+		"kyazdani42/nvim-web-devicons", -- icons
+		"feline-nvim/feline.nvim", -- statusline
+		"goolord/alpha-nvim", -- dashboard
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
+
 
 	use({ -- git labels
 		"lewis6991/gitsigns.nvim",
@@ -49,32 +77,12 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use({ -- autopair
-		"windwp/nvim-autopairs",
+	use({
+		"lukas-reineke/indent-blankline.nvim", -- indent line
+		"windwp/nvim-autopairs", -- autopair
 		config = function()
 			require("nvim-autopairs").setup()
 		end,
-	})
-
-	use({ -- lsp/format
-		"williamboman/nvim-lsp-installer",
-		"neovim/nvim-lspconfig",
-		"jose-elias-alvarez/null-ls.nvim", -- for formatters and linters
-	})
-
-	use({ -- completion
-		"hrsh7th/nvim-cmp", -- cmp plugin
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-path", -- path cmp
-		"hrsh7th/cmp-buffer", -- buffer cmp
-		"saadparwaiz1/cmp_luasnip", -- snippets cmp
-		"L3MON4D3/LuaSnip", -- snippets engine
-		"rafamadriz/friendly-snippets", -- snippets
-	})
-
-	use({ -- dashboard
-		"goolord/alpha-nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
 	use({ -- sneak
@@ -85,30 +93,22 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use({ -- buffer delete
+	use({ -- buffer delete -> keymapped
 		"famiu/bufdelete.nvim",
 		config = function()
 			require("bufdelete").bufdelete(0, true)
 		end,
 	})
 
-	use({ -- telescope
-		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
-		requires = { "nvim-lua/plenary.nvim" },
-	})
-
-	use({ -- surround
+	use({ -- quick surround
 		"kylechui/nvim-surround",
 		config = function()
 			require("nvim-surround").setup()
 		end,
 	})
 
-	use({ -- comment
-		"numToStr/Comment.nvim",
-		"JoosepAlviste/nvim-ts-context-commentstring",
-	})
+	use("navarasu/onedark.nvim") -- colorschemes: onedark
+	use("wakatime/vim-wakatime") -- wakatime
 
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

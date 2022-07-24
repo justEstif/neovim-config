@@ -2,6 +2,7 @@
 -- Telescope configuration file
 ----------------------------------------------------------
 
+-- try/catch
 local telescope_status_ok, telescope = pcall(require, "telescope")
 if not telescope_status_ok then
 	return
@@ -26,7 +27,7 @@ telescope.setup({
 			},
 			n = {
 				-- ["<C-w>"] = action_layout.toggle_preview, -- toggle preview
-				["<C-?>"] = actions.which_key,
+				["<C-?>"] = actions.which_key, -- see options
 			},
 		},
 		file_ignore_patterns = { -- ignore these files
@@ -34,7 +35,7 @@ telescope.setup({
 			".git/.*",
 		},
 	},
-	pickers = {
+	pickers = { -- defining the options of different pickers
 		find_files = {
 			theme = "dropdown",
 			previewer = false,
@@ -52,7 +53,5 @@ telescope.setup({
 			theme = "ivy",
 		},
 	},
-  extensions = {
-  }
+	extensions = {},
 })
-

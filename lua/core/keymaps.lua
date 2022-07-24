@@ -43,8 +43,7 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 map("i", "<A-j>", "<Esc>:m .+1<CR>==gi") -- move line up(i)
 map("i", "<A-k>", "<Esc>:m .-2<CR>==gi") -- move line down(i)
 
--- when you paste on top of something, hold the initial yanked
-map("v", "p", '"_dP')
+map("v", "p", '"_dP') -- chris the machine recommends
 
 -- Window
 map("n", "<C-k>", "<C-w>k") -- window up
@@ -88,7 +87,7 @@ map("n", "<C-t>", ":Term<CR>") -- open
 map("t", "<Esc>", "<C-\\><C-n>") -- exit
 
 -- NvimTree
-map('n', '<C-n>', ':NvimTreeToggle<CR>') -- open/close
+map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
