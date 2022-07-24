@@ -52,4 +52,7 @@ telescope.setup({
 			theme = "ivy",
 		},
 	},
+  extensions = {
+  }
 })
+
