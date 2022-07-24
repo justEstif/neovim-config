@@ -50,7 +50,7 @@ local options = {
 	fillchars = { fold = " " },
 	foldnestmax = 3,
 	foldminlines = 1,
-	foldenable = false,
+	foldenable = false, -- don't start folded
 }
 
 -- Settings Options

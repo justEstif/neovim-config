@@ -1,8 +1,16 @@
-- This config is for JS programmers by default.
-- The keymappings are heavily opinionated.
-- Pretty minimal, and it doesn't have which-key.
 
-- TODO:
-  - ~~Add folding~~
-  - Add keybindings wrapper
-    - https://github.com/lazytanuki/nvim-mapper
+# Minimal Neovim
+
+- Hello, I wanted to share a minimal neovim config for JS developers.
+
+- Capabilities:
+  - lsp + auto-complete + snippets
+  - formatting + format on save
+  - telescope == fzf
+
+- The keymappings are heavily opinionated.
+- I made it using:
+  - <https://github.com/brainfucksec/neovim-lua>
+  - <https://github.com/LunarVim/Neovim-from-scratch/>
+
+- Besides the plugin requirements, the lsp is setup to work with neovim 0.8

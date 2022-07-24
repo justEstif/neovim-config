@@ -57,6 +57,7 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
+
 	-- add formatters here to use null-ls by defualt
 	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
 

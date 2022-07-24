@@ -93,17 +93,12 @@ map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
--- '<leader>bl':  list all buffers; defined in the buffers section
 
 -- Hop
 map("n", "s", "<cmd>HopPattern<CR>")
 map("n", "ml", "<cmd>HopLineStart<CR>")
 
---- lsp in
--- 'gd',         : Definition
--- '<space>h',   : hover
--- '<space>D',   : type definition
--- '<space>rn',  : rename
--- '<space>ca',  : code action
--- '<space>e',   : show linediagnostics
--- '<space>f',   : format
+-- other keybindings in:
+  -- plugins/lsp/handlers
+  -- plugins/telescope
+  -- plugins/tree
