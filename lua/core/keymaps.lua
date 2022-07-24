@@ -1,13 +1,15 @@
 -----------------------------------------------------------
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
-
 local function map(mode, lhs, rhs, opts)
-	local options = { noremap = true, silent = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    local options = {
+        noremap = true,
+        silent = true
+    }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- Change leader to a comma
@@ -24,6 +26,10 @@ map("", "<left>", "<nop>")
 map("", "<right>", "<nop>")
 
 map("i", "jk", "<Esc>") -- map esc to jk
+
+-- -- TODO Working on this
+map("i", "<C-l>", "<Esc>$i") -- <C-a> to go the to end of line (i)
+map("i", "<C-h>", "<Esc>_i") -- <C-e> to go the to start of line (i)
 
 map("n", "H", "_") -- H to go the start of line(n)
 map("v", "H", "_") -- H to go the start of line(v)
@@ -70,9 +76,11 @@ map("v", ">", ">gv")
 map("n", "<leader>j", "gJ") -- leader j to join lines(n)
 map("v", "<leader>j", "gJ") -- leader j to join lines(v)
 
+map("n", "<Esc>", ":nohl<CR>") -- clear highlights with esc
+
 map("n", "<leader>s", ":w<CR>") -- save file
 map("n", "<leader>c", ":nohl<CR>") -- clear search highlights
-map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
+map("n", "<leader>r", ":so $MYVIMRC<CR>") -- Reload configuration without restart nvim
 map("n", "<leader>q", ":qa!<CR>") -- force exit
 
 -- gx to open link under cursor
@@ -99,6 +107,6 @@ map("n", "s", "<cmd>HopPattern<CR>")
 map("n", "ml", "<cmd>HopLineStart<CR>")
 
 -- other keybindings in:
-  -- plugins/lsp/handlers
-  -- plugins/telescope
-  -- plugins/tree
+-- plugins/lsp/handlers
+-- plugins/telescope
+-- plugins/tree
