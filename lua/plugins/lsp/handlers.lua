@@ -30,7 +30,7 @@ end
 
 local function lsp_highlight_document(client)
 	-- Set autocommands conditional on server_capabilities
-	if client.resolved_capabilities.document_highlight then
+	if client.server_capabilities.document_highlight then
 		vim.api.nvim_exec(
 			[[
       augroup lsp_document_highlight
@@ -52,17 +52,31 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>h", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>f", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
+	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
 end
 
 M.on_attach = function(client, bufnr)
+	-- add formatters here to use null-ls by defualt
 	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
 
 	for _, value in ipairs(ignored_formatters) do
 		if value == client.name then
-			client.resolved_capabilities.document_formatting = false
+			client.server_capabilities.document_formatting = false
 		end
+	end
+
+	-- format on save
+	local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+	if client.supports_method("textDocument/formatting") then
+		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = bufnr,
+			callback = function()
+				vim.lsp.buf.format({ bufnr = bufnr })
+			end,
+		})
 	end
 
 	lsp_keymaps(bufnr)
