@@ -64,6 +64,9 @@ map("n", "<leader>tn", ":tabnext<CR>") -- go to next tab
 map("n", "<leader>tp", ":tabprev<CR>") -- go to prev tab
 map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
 
+-- Terminal
+map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
+
 -- Stay in indent mode
 map("v", "<", "<gv")
 map("v", ">", ">gv")
@@ -82,10 +85,6 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
-
--- Terminal mappings
--- map("n", "<C-t>", ":Term<CR>") -- open
--- map("t", "<Esc>", "<C-\\><C-n>") -- exit
 
 -- NvimTree
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
