@@ -79,9 +79,6 @@ return packer.startup(function(use)
 	use({
 		"lukas-reineke/indent-blankline.nvim", -- indent line
 		"windwp/nvim-autopairs", -- autopair
-		config = function()
-			require("nvim-autopairs").setup()
-		end,
 	})
 
 	use({ -- sneak
