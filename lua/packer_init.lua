@@ -68,6 +68,8 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
+	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
+
 	use({ -- git labels
 		"lewis6991/gitsigns.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
