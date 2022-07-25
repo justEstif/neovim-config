@@ -2,7 +2,6 @@
 -- Telescope configuration file
 ----------------------------------------------------------
 
--- try/catch
 local telescope_status_ok, telescope = pcall(require, "telescope")
 if not telescope_status_ok then
 	return
@@ -16,7 +15,7 @@ end
 telescope.setup({
 	defaults = {
 		prompt_prefix = "  ",
-		selection_caret = "  ",
+		selection_caret = "",
 		mappings = {
 			i = {
 				["<C-u>"] = false, -- clear input with C-u
@@ -42,7 +41,11 @@ telescope.setup({
 			find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }, -- turn off `./`
 		},
 		buffers = {
-			theme = "cursor",
+			theme = "dropdown",
+			previewer = false,
+		},
+		oldfiles = {
+			theme = "dropdown",
 			previewer = false,
 		},
 		current_buffer_fuzzy_find = {

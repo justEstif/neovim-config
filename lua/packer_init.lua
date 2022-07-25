@@ -1,6 +1,7 @@
 -----------------------------------------------------------
 -- Plugin manager configuration file
 -----------------------------------------------------------
+
 -- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -70,14 +71,6 @@ return packer.startup(function(use)
 
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 
-	use({ -- git labels
-		"lewis6991/gitsigns.nvim",
-		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("gitsigns").setup()
-		end,
-	})
-
 	use({
 		"lukas-reineke/indent-blankline.nvim", -- indent line
 		"windwp/nvim-autopairs", -- autopair
@@ -102,6 +95,14 @@ return packer.startup(function(use)
 		"kylechui/nvim-surround",
 		config = function()
 			require("nvim-surround").setup()
+		end,
+	})
+
+	use({ -- git labels
+		"lewis6991/gitsigns.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("gitsigns").setup()
 		end,
 	})
 

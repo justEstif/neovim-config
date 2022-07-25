@@ -44,7 +44,8 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 map("i", "<A-j>", "<Esc>:m .+1<CR>==gi") -- move line up(i)
 map("i", "<A-k>", "<Esc>:m .-2<CR>==gi") -- move line down(i)
 
-map("v", "p", '"_dP') -- chris the machine recommends
+-- don't replace the yanked with the replaced
+map("v", "p", '"_dP')
 
 -- Window
 map("n", "<C-k>", "<C-w>k") -- window up
@@ -91,7 +92,9 @@ map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 
 -- Hop
 map("n", "ml", "<cmd>HopLineStart<CR>")
+map("v", "ml", "<cmd>HopLineStart<CR>")
 map("n", "s", "<cmd>HopChar2<CR>")
+map("v", "s", "<cmd>HopChar2<CR>")
 
 -- Telescope
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
@@ -100,6 +103,7 @@ map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 
 -- other keybindings in:
 -- plugins.lsp/handlers
+-- plugins.nvim-cmp
 -- plugins.telescope
 -- plugins.tree
 -- plugins.toggleterm
