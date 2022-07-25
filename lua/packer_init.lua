@@ -113,7 +113,10 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use("navarasu/onedark.nvim") -- colorschemes: onedark
+	use({
+		"navarasu/onedark.nvim", -- onedark
+	})
+
 	use("wakatime/vim-wakatime") -- wakatime
 
 	-- Put this at the end after all plugins
