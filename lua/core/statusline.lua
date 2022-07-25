@@ -106,6 +106,23 @@ local comps = {
 			left_sep = " ",
 			right_sep = " ",
 		},
+		-- Cursor position in %
+		line_percentage = {
+			provider = { name = "line_percentage" },
+			hl = {
+				fg = colors.cyan,
+				style = "bold",
+			},
+			left_sep = " ",
+			right_sep = " ",
+		},
+		-- Simple scrollbar
+		scroll_bar = {
+			provider = { name = "scroll_bar" },
+			hl = { fg = colors.fg },
+			left_sep = " ",
+			right_sep = " ",
+		},
 	},
 	-- LSP info
 	diagnos = {
