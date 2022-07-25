@@ -84,8 +84,8 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -----------------------------------------------------------
 
 -- Terminal mappings
-map("n", "<C-t>", ":Term<CR>") -- open
-map("t", "<Esc>", "<C-\\><C-n>") -- exit
+-- map("n", "<C-t>", ":Term<CR>") -- open
+-- map("t", "<Esc>", "<C-\\><C-n>") -- exit
 
 -- NvimTree
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
@@ -100,6 +100,7 @@ map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 
 -- other keybindings in:
--- plugins/lsp/handlers
--- plugins/telescope
--- plugins/tree
+-- plugins.lsp/handlers
+-- plugins.telescope
+-- plugins.tree
+-- plugins.toggleterm
