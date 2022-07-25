@@ -7,17 +7,17 @@
 -- Load nvim color scheme:
 -- Change the "require" values with your color scheme
 -- Available color schemes: onedark, monokai, rose-pine
-local status_ok, color_scheme = pcall(require, "onedark")
-if not status_ok then
+local status_ok_one_dark, one_dark = pcall(require, "onedark")
+if not status_ok_one_dark then
 	return
 end
 
 -- OneDark styles: dark, darker, cool, deep, warm, warmer, light
-require("onedark").setup({
+one_dark.setup({
 	style = "cool",
 	colors = { fg = "#b2bbcc" }, --default: #a0a8b7  secondary: #b2bbcc
 })
-require("onedark").load()
+one_dark.load()
 
 -- statusline color schemes:
 -- import with: require('colors').colorscheme_name
