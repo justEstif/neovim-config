@@ -4,7 +4,6 @@ if not status_ok then
 end
 
 nvim_treesitter.setup({
-	-- comment parser is for highlighting TODO/FIXME
 	ensure_installed = {
 		"css",
 		"html",

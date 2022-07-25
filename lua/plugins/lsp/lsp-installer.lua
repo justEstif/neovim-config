@@ -1,9 +1,12 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
+local status_ok_lsp_installer, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status_ok_lsp_installer then
 	return
 end
 
-local lspconfig = require("lspconfig")
+local status_ok_lspconfig, lspconfig = pcall(require, "lspconfig")
+if not status_ok_lspconfig then
+	return
+end
 
 local servers = { "html", "cssls", "tsserver", "sumneko_lua", "jsonls", "tailwindcss" }
 

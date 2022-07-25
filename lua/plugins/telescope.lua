@@ -26,7 +26,6 @@ telescope.setup({
 				["<C-?>"] = actions.which_key, -- available keys
 			},
 			n = {
-				-- ["<C-w>"] = action_layout.toggle_preview, -- toggle preview
 				["<C-?>"] = actions.which_key, -- see options
 			},
 		},
@@ -40,6 +39,7 @@ telescope.setup({
 			theme = "dropdown",
 			previewer = false,
 			hidden = true,
+			find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }, -- turn off `./`
 		},
 		buffers = {
 			theme = "cursor",

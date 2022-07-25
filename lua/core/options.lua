@@ -6,7 +6,6 @@ local g = vim.g -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
 local options = {
-
 	-- General
 	mouse = "a", -- Enable mouse support
 	clipboard = "unnamedplus", -- Copy/paste to system clipboard
@@ -87,6 +86,4 @@ end
 -- Other options
 opt.iskeyword:append("-") -- set words with - as 1
 opt.iskeyword:append("_") -- set words with _ as 1
-
--- Disable nvim intro
-opt.shortmess:append("sI")
+opt.shortmess:append("sI") -- Disable nvim intro
