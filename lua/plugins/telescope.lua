@@ -14,8 +14,9 @@ end
 
 telescope.setup({
 	defaults = {
-		prompt_prefix = "  ",
-		selection_caret = "",
+		entry_prefix = "  ", -- remove symbols
+		prompt_prefix = "  ",
+		selection_caret = "  ",
 		mappings = {
 			i = {
 				["<C-u>"] = false, -- clear input with C-u
@@ -32,6 +33,7 @@ telescope.setup({
 			"node_modules/.*",
 			".git/.*",
 		},
+		layout_strategy = "flex", -- display: flex;
 	},
 	pickers = { -- defining the options of different pickers
 		find_files = {
