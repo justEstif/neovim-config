@@ -2,11 +2,6 @@
 -- Color schemes configuration file
 -----------------------------------------------------------
 
--- See: https://github.com/brainfucksec/neovim-lua#appearance
-
--- Load nvim color scheme:
--- Change the "require" values with your color scheme
--- Available color schemes: onedark, monokai, rose-pine
 local status_ok_one_dark, one_dark = pcall(require, "onedark")
 if not status_ok_one_dark then
 	return
@@ -23,8 +18,6 @@ one_dark.load()
 -- import with: require('colors').colorscheme_name
 local M = {}
 
--- Theme: OneDark (dark)
--- Colors: https://github.com/navarasu/onedark.nvim/blob/master/lua/onedark/palette.lua
 M.onedark_dark = {
 	bg = "#282c34",
 	fg = "#b2bbcc",
