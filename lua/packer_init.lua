@@ -115,6 +115,10 @@ return packer.startup(function(use)
 	})
 
 	use({
+		"nanozuki/tabby.nvim", -- tabline
+	})
+
+	use({
 		"navarasu/onedark.nvim", -- onedark
 	})
 
