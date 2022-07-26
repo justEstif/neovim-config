@@ -20,11 +20,9 @@ vim.g.mapleader = ","
 
 -- Disable arrow keys
 map("", "<up>", "<nop>")
-map("", "<down>", "<nop>")
 map("", "<left>", "<nop>")
+map("", "<down>", "<nop>")
 map("", "<right>", "<nop>")
-
-map("i", "jk", "<Esc>") -- map esc to jk
 
 map("n", "H", "_") -- H to go the start of line(n)
 map("v", "H", "_") -- H to go the start of line(v)
@@ -44,8 +42,7 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 map("i", "<A-j>", "<Esc>:m .+1<CR>==gi") -- move line up(i)
 map("i", "<A-k>", "<Esc>:m .-2<CR>==gi") -- move line down(i)
 
--- don't replace the yanked with the replaced
-map("v", "p", '"_dP')
+map("v", "p", '"_dP') -- keep yanked when pasting over in visual mode
 
 -- Window
 map("n", "<C-k>", "<C-w>k") -- window up
@@ -56,6 +53,7 @@ map("n", "<C-l>", "<C-w>l") -- window right
 -- Buffers
 map("n", "<leader>bn", ":bn<CR>") -- next buffer(n)
 map("n", "<leader>bp", ":bp<CR>") -- previous buffer(n)
+map("n", "<leader>bh", ":Alpha<CR>") -- go to home buffer(n)
 map("n", "<leader>bk", ":Bdelete<CR>") -- kill current buffer(n)
 map("n", "<leader>bl", ":Telescope buffers<CR>") -- list all buffers
 
@@ -63,7 +61,10 @@ map("n", "<leader>bl", ":Telescope buffers<CR>") -- list all buffers
 map("n", "<leader>tt", ":tabedit<CR>") -- open buffer in new tab
 map("n", "<leader>tn", ":tabnext<CR>") -- go to next tab
 map("n", "<leader>tp", ":tabprev<CR>") -- go to prev tab
+map("n", "<leader>to", ":tabonly<CR>") -- kill all other tabs
 map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
+map("n", "<leader>tmp", ":-tabmove<CR>") -- move current tab to previous position
+map("n", "<leader>tmn", ":+tabmove<CR>") -- move current tab to next position
 
 -- Terminal
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
@@ -77,10 +78,10 @@ map("v", "<leader>j", "gJ") -- leader j to join lines(v)
 
 map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>s", ":w<CR>") -- save file
-map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 map("n", "<leader>q", ":qa!<CR>") -- force exit
+map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 
--- gx to open link under cursor
+-- open link under cursor
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 
 -----------------------------------------------------------
@@ -91,15 +92,15 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 
 -- Hop
-map("n", "ml", "<cmd>HopLineStart<CR>")
-map("v", "ml", "<cmd>HopLineStart<CR>")
 map("n", "s", "<cmd>HopChar2<CR>")
 map("v", "s", "<cmd>HopChar2<CR>")
+map("n", "ml", "<cmd>HopLineStart<CR>")
+map("v", "ml", "<cmd>HopLineStart<CR>")
 
 -- Telescope
-map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
+map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 
 -- other keybindings in:
 -- plugins.lsp/handlers
