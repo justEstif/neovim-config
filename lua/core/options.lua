@@ -27,6 +27,7 @@ local options = {
 	cursorline = true, -- Cursorline one
 	signcolumn = "yes:1", -- Add extra sign column next to line number
 	pumheight = 15, -- pop up menu height
+	showtabline = 0, -- turn off tabline
 
 	-- Tabs, indent
 	expandtab = true, -- Use spaces instead of tabs
