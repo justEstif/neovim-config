@@ -56,9 +56,13 @@ return packer.startup(function(use)
 		requires = { "nvim-lua/plenary.nvim" },
 	})
 
-	use({ -- comment
-		"numToStr/Comment.nvim",
-		"JoosepAlviste/nvim-ts-context-commentstring",
+	use({
+		"numToStr/Comment.nvim", -- comments
+		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments
+		{
+			"folke/todo-comments.nvim", -- todo comment highlighting
+			requires = "nvim-lua/plenary.nvim",
+		},
 	})
 
 	use({
@@ -69,60 +73,27 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
-	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
-
 	use({
 		"lukas-reineke/indent-blankline.nvim", -- indent line
 		"windwp/nvim-autopairs", -- autopair
-	})
-
-	use({ -- sneak
-		"phaazon/hop.nvim",
-		branch = "v2",
-		config = function()
-			require("hop").setup({})
-		end,
-	})
-
-	use({ -- buffer delete -> keymapped
-		"famiu/bufdelete.nvim",
-		config = function()
-			require("bufdelete").bufdelete(0, true)
-		end,
-	})
-
-	use({ -- quick surround
-		"kylechui/nvim-surround",
-		config = function()
-			require("nvim-surround").setup()
-		end,
+		{ "akinsho/toggleterm.nvim", tag = "v2.*" }, -- better terminal
 	})
 
 	use({ -- git labels
 		"lewis6991/gitsigns.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("gitsigns").setup()
-		end,
 	})
 
 	use({
-		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
-		config = function()
-			require("todo-comments").setup({})
-		end,
-	})
-
-	use({
+		"kylechui/nvim-surround", -- quick surround
+		{ -- sneak
+			"phaazon/hop.nvim",
+			branch = "v2",
+		},
 		"nanozuki/tabby.nvim", -- tabline
-	})
-
-	use({
 		"navarasu/onedark.nvim", -- onedark
+		"wakatime/vim-wakatime", -- wakatime
 	})
-
-	use("wakatime/vim-wakatime") -- wakatime
 
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
