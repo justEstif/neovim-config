@@ -58,26 +58,22 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-	-- add lsp that has builtin formatters in order to use null-ls instead
-	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
-
-	for _, value in ipairs(ignored_formatters) do
-		if value == client.name then
-			client.server_capabilities.document_formatting = false
-		end
-	end
-
 	-- format on save
-	local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = augroup,
 			buffer = bufnr,
 			callback = function()
 				vim.lsp.buf.format({ bufnr = bufnr })
 			end,
 		})
+	end
+
+	-- add lsp that has builtin formatters in order to use null-ls instead
+	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
+	for _, value in ipairs(ignored_formatters) do
+		if value == client.name then
+			client.server_capabilities.document_formatting = false
+		end
 	end
 
 	lsp_keymaps(bufnr)
