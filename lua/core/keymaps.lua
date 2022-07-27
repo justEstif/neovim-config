@@ -42,8 +42,6 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 map("i", "<A-j>", "<Esc>:m .+1<CR>==gi") -- move line up(i)
 map("i", "<A-k>", "<Esc>:m .-2<CR>==gi") -- move line down(i)
 
-map("v", "p", '"_dP') -- keep yanked when pasting over in visual mode
-
 -- Window
 map("n", "<C-k>", "<C-w>k") -- window up
 map("n", "<C-h>", "<C-w>h") -- window left
@@ -54,13 +52,13 @@ map("n", "<C-l>", "<C-w>l") -- window right
 map("n", "<space>b", ":Telescope buffers<CR>")
 
 -- Tabs
-map("n", "<leader>tt", ":tabedit<CR>") -- open buffer in new tab
-map("n", "<leader>tn", ":tabnext<CR>") -- go to next tab
-map("n", "<leader>tp", ":tabprev<CR>") -- go to prev tab
-map("n", "<leader>to", ":tabonly<CR>") -- kill all other tabs
-map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
-map("n", "<leader>tmp", ":-tabmove<CR>") -- move current tab to previous position
-map("n", "<leader>tmn", ":+tabmove<CR>") -- move current tab to next position
+map("n", "<space>tt", ":tabedit<CR>") -- open buffer in new tab
+map("n", "<space>tn", ":tabnext<CR>") -- go to next tab
+map("n", "<space>tp", ":tabprev<CR>") -- go to prev tab
+map("n", "<space>to", ":tabonly<CR>") -- kill all other tabs
+map("n", "<space>tk", ":tabclose<CR>") -- kill current tab
+map("n", "<space>tmp", ":-tabmove<CR>") -- move current tab to previous position
+map("n", "<space>tmn", ":+tabmove<CR>") -- move current tab to next position
 
 -- Terminal
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
@@ -83,20 +81,19 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
-
 -- NvimTree
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 
--- Hop
-map("n", "s", "<cmd>HopChar2<CR>")
-map("v", "s", "<cmd>HopChar2<CR>")
-map("n", "ml", "<cmd>HopLineStart<CR>")
-map("v", "ml", "<cmd>HopLineStart<CR>")
+-- Sneak = Hop + Telescope
+map("n", "sa", "<cmd>HopChar2<CR>")
+map("v", "sa", "<cmd>HopChar2<CR>")
+map("n", "sl", "<cmd>HopChar2CurrentLine<CR>")
+map("v", "sl", "<cmd>HopChar2CurrentLine<CR>")
+map("n", "sd", ":Telescope live_grep<CR>") -- find text in directory
+map("n", "sf", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 
 -- Telescope
-map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
-map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 
 -- other keybindings in:
 -- plugins.lsp/handlers
