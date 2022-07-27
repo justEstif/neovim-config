@@ -50,12 +50,8 @@ map("n", "<C-h>", "<C-w>h") -- window left
 map("n", "<C-j>", "<C-w>j") -- window down
 map("n", "<C-l>", "<C-w>l") -- window right
 
--- Buffers
-map("n", "<leader>bn", ":bn<CR>") -- next buffer(n)
-map("n", "<leader>bp", ":bp<CR>") -- previous buffer(n)
-map("n", "<leader>bh", ":Alpha<CR>") -- go to home buffer(n)
-map("n", "<leader>bk", ":Bdelete<CR>") -- kill current buffer(n)
-map("n", "<leader>bl", ":Telescope buffers<CR>") -- list all buffers
+-- Buffers -- list all buffers -- <C-d> to delete buff
+map("n", "<space>b", ":Telescope buffers<CR>")
 
 -- Tabs
 map("n", "<leader>tt", ":tabedit<CR>") -- open buffer in new tab

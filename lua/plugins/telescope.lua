@@ -45,6 +45,15 @@ telescope.setup({
 		buffers = {
 			theme = "dropdown",
 			previewer = false,
+			mappings = { -- easy close buffer shortcut
+				i = {
+					["<C-d>"] = actions.delete_buffer,
+				},
+				n = {
+					["D"] = actions.delete_buffer,
+					["<C-d>"] = actions.delete_buffer,
+				},
+			},
 		},
 		oldfiles = {
 			theme = "dropdown",
