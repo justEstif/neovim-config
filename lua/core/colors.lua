@@ -9,7 +9,7 @@ end
 
 -- OneDark styles: dark, darker, cool, deep, warm, warmer, light
 one_dark.setup({
-	style = "cool",
+	style = "darker",
 	colors = { fg = "#b2bbcc" }, --default: #a0a8b7  secondary: #b2bbcc
 })
 one_dark.load()

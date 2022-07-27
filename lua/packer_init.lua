@@ -66,17 +66,21 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"kyazdani42/nvim-tree.lua", -- file explorer
 		"kyazdani42/nvim-web-devicons", -- icons
-		"feline-nvim/feline.nvim", -- statusline
-		"goolord/alpha-nvim", -- dashboard
-		requires = { "kyazdani42/nvim-web-devicons" },
+		{ -- file explorer
+			"kyazdani42/nvim-tree.lua",
+			requires = { "kyazdani42/nvim-web-devicons" },
+		},
+		{ -- dashboard
+			"goolord/alpha-nvim",
+			requires = { "kyazdani42/nvim-web-devicons" },
+		},
+		{ "akinsho/toggleterm.nvim", tag = "v2.*" }, -- better terminal
 	})
 
 	use({
 		"lukas-reineke/indent-blankline.nvim", -- indent line
 		"windwp/nvim-autopairs", -- autopair
-		{ "akinsho/toggleterm.nvim", tag = "v2.*" }, -- better terminal
 	})
 
 	use({ -- git labels
@@ -86,13 +90,11 @@ return packer.startup(function(use)
 
 	use({
 		"kylechui/nvim-surround", -- quick surround
-		{ -- sneak
-			"phaazon/hop.nvim",
-			branch = "v2",
-		},
+		"feline-nvim/feline.nvim", -- statusline
 		"nanozuki/tabby.nvim", -- tabline
 		"navarasu/onedark.nvim", -- onedark
 		"wakatime/vim-wakatime", -- wakatime
+		{ "phaazon/hop.nvim", branch = "v2" }, -- sneak
 	})
 
 	-- Put this at the end after all plugins
