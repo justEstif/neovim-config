@@ -50,6 +50,7 @@ map("n", "<C-l>", "<C-w>l") -- window right
 
 -- Buffers -- list all buffers -- <C-d> to delete buff
 map("n", "<space>b", ":Telescope buffers<CR>")
+map("n", "<space>qb", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
 
 -- Tabs
 map("n", "<space>tt", ":tabedit<CR>") -- open buffer in new tab
