@@ -59,22 +59,25 @@ return packer.startup(function(use)
 	use({
 		"numToStr/Comment.nvim", -- comments
 		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments
-		{
-			"folke/todo-comments.nvim", -- todo comment highlighting
-			requires = "nvim-lua/plenary.nvim",
-		},
+	})
+
+	use({
+		"folke/todo-comments.nvim", -- todo comment highlighting
+		requires = "nvim-lua/plenary.nvim",
+	})
+
+	use({ -- file explorer
+		"kyazdani42/nvim-tree.lua",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
+
+	use({ -- dashboard
+		"goolord/alpha-nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
 	use({
 		"kyazdani42/nvim-web-devicons", -- icons
-		{ -- file explorer
-			"kyazdani42/nvim-tree.lua",
-			requires = { "kyazdani42/nvim-web-devicons" },
-		},
-		{ -- dashboard
-			"goolord/alpha-nvim",
-			requires = { "kyazdani42/nvim-web-devicons" },
-		},
 		{ "akinsho/toggleterm.nvim", tag = "v2.*" }, -- better terminal
 	})
 
@@ -91,7 +94,6 @@ return packer.startup(function(use)
 	use({
 		"kylechui/nvim-surround", -- quick surround
 		"feline-nvim/feline.nvim", -- statusline
-		"nanozuki/tabby.nvim", -- tabline
 		"navarasu/onedark.nvim", -- onedark
 		"wakatime/vim-wakatime", -- wakatime
 		{ "phaazon/hop.nvim", branch = "v2" }, -- sneak

@@ -1,5 +1,4 @@
 -- Import Lua modules
--- not using for loop so I could jump to file using LSP
 require("packer_init")
 require("core.autocmds")
 require("core.colors")
@@ -14,7 +13,6 @@ require("plugins.lsp")
 require("plugins.nvim-cmp")
 require("plugins.nvim-tree")
 require("plugins.nvim-treesitter")
-require("plugins.tabby")
 require("plugins.telescope")
 require("plugins.toggleterm")
 require("plugins.todo-comments")
