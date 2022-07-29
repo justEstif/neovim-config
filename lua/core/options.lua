@@ -43,16 +43,6 @@ local options = {
     updatetime = 300, -- ms to wait for trigger an event
     undofile = true, -- enable persistent undo
 
-    -- fold settings
-    foldmethod = "expr",
-    foldexpr = "nvim_treesitter#foldexpr()",
-    foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']],
-    fillchars = {
-        fold = " "
-    },
-    foldnestmax = 3,
-    foldminlines = 1,
-    foldenable = false -- don't start folded
 }
 
 -- Settings Options
