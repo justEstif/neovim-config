@@ -28,6 +28,8 @@ local options = {
 	scrolloff = 8, -- Number of lines above and below cursor
 	cursorline = true, -- Cursorline one
 	pumheight = 15, -- pop up menu height
+	foldtext = string.format("  %s: %d lines", vim.fn.getline(vim.v.foldstart), vim.v.foldend - vim.v.foldstart + 1),
+	fillchars = { eob = "-", fold = " " },
 
 	-- Tabs, indent
 	expandtab = true, -- Use spaces instead of tabs
