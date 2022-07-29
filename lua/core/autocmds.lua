@@ -53,3 +53,20 @@ autocmd("Filetype", {
 	pattern = { "xml", "html", "xhtml", "css", "scss", "javascript", "typescript", "yaml", "lua" },
 	command = "setlocal shiftwidth=2 tabstop=2",
 })
+
+-- Remember folds
+augroup("GetFolds", {
+	clear = true,
+})
+
+autocmd("BufWrite", {
+	group = "GetFolds",
+	pattern = "*",
+	command = "mkview",
+})
+
+autocmd("BufRead", {
+	group = "GetFolds",
+	pattern = "*",
+	command = "silent! loadview",
+})
