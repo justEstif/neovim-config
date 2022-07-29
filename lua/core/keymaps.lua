@@ -57,6 +57,8 @@ map("n", "<space>tk", ":tabclose<CR>") -- kill current tab
 map("n", "<space>tmp", ":-tabmove<CR>") -- move current tab to previous position
 map("n", "<space>tmn", ":+tabmove<CR>") -- move current tab to next position
 
+map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
+
 -- Terminal
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
 
@@ -83,12 +85,9 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 
 -- Sneak = Hop + Telescope
-map("n", "sa", "<cmd>HopChar2<CR>")
-map("v", "sa", "<cmd>HopChar2<CR>")
-map("n", "sl", "<cmd>HopChar2CurrentLine<CR>")
-map("v", "sl", "<cmd>HopChar2CurrentLine<CR>")
-map("n", "sd", ":Telescope live_grep<CR>") -- find text in directory
-map("n", "sf", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
+map({ "n", "v" }, "s", "<cmd>HopChar2<CR>")
+map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
+map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
