@@ -36,7 +36,7 @@ return packer.startup(function(use)
 
 	use({ -- lsp/formating
 		"neovim/nvim-lspconfig", -- nvim native lsp
-		"williamboman/nvim-lsp-installer", -- lsp  installer
+		"williamboman/nvim-lsp-installer", -- lsp installer
 		"jose-elias-alvarez/null-ls.nvim", -- formatter
 	})
 
@@ -52,6 +52,7 @@ return packer.startup(function(use)
 
 	use({ -- telescope
 		"nvim-telescope/telescope.nvim",
+		"nvim-telescope/telescope-file-browser.nvim",
 		branch = "0.1.x",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
@@ -64,11 +65,6 @@ return packer.startup(function(use)
 	use({
 		"folke/todo-comments.nvim", -- todo comment highlighting
 		requires = "nvim-lua/plenary.nvim",
-	})
-
-	use({ -- file explorer
-		"kyazdani42/nvim-tree.lua",
-		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
 	use({ -- dashboard
