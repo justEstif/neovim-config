@@ -81,8 +81,6 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
--- NvimTree
-map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 
 -- Sneak = Hop + Telescope
 map({ "n", "v" }, "s", "<cmd>HopChar2<CR>")
@@ -91,7 +89,7 @@ map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in curre
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
-
+map("n", "<C-n>", ":Telescope file_browser<CR>") -- Telescope file browser
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
