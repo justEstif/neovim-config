@@ -1,4 +1,3 @@
-
 # Minimal Neovim
 
 - Hello, I wanted to share a minimal neovim config for JS developers.
@@ -15,3 +14,5 @@
 
 - Besides the plugin requirements, the lsp is setup to work with neovim 0.8
 - You have to initialize npm or yarn for tssserver to work.
+
+- _I will add more details_
