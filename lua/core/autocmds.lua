@@ -43,30 +43,3 @@ autocmd("Filetype", {
 	pattern = { "text", "markdown", "html", "xhtml", "javascript", "typescript" },
 	command = "setlocal cc=0",
 })
-
--- Set indentation to 2 spaces
-augroup("setIndent", {
-	clear = true,
-})
-autocmd("Filetype", {
-	group = "setIndent",
-	pattern = { "xml", "html", "xhtml", "css", "scss", "javascript", "typescript", "yaml", "lua" },
-	command = "setlocal shiftwidth=2 tabstop=2",
-})
-
--- Remember folds
-augroup("GetFolds", {
-	clear = true,
-})
-
-autocmd("BufWrite", {
-	group = "GetFolds",
-	pattern = "*",
-	command = "mkview",
-})
-
-autocmd("BufRead", {
-	group = "GetFolds",
-	pattern = "*",
-	command = "silent! loadview",
-})
