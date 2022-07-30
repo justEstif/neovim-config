@@ -25,8 +25,9 @@ local options = {
 	-- linebreak = true, -- Wrap on word boundary
 	termguicolors = true, -- Enable 24-bit RGB colors
 	laststatus = 3, -- Set global statusline
-	scrolloff = 8, -- Number of lines above and below cursor
-	cursorline = true, -- Cursorline one
+	scrolloff = 5, -- Number of lines above and below cursor
+	cursorline = true, -- Cursorline on
+	showtabline = 0, -- don't show tabline
 	pumheight = 15, -- pop up menu height
 	foldtext = string.format("  %s: %d lines", vim.fn.getline(vim.v.foldstart), vim.v.foldend - vim.v.foldstart + 1),
 	fillchars = { eob = "-", fold = " " },
