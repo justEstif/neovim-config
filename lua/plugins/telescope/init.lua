@@ -11,6 +11,8 @@ if not actions_status_ok then
 	return
 end
 
+local utils = require("core.utils")
+
 telescope.setup({
 
 	defaults = {
@@ -49,9 +51,7 @@ telescope.setup({
 			theme = "dropdown",
 			previewer = false,
 			on_complete = { -- start in normal mode
-				function()
-					vim.cmd("stopinsert")
-				end,
+				utils.start_normal,
 			},
 			mappings = { -- easy close buffer shortcut
 				i = {
@@ -76,5 +76,9 @@ telescope.setup({
 			theme = "ivy",
 		},
 	},
-	extensions = {},
+	extensions = {
+		file_browser = require("plugins.telescope.file-browser"),
+	},
 })
+
+telescope.load_extension("file_browser")
