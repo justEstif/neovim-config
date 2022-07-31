@@ -9,7 +9,6 @@ local function map(mode, lhs, rhs, opts)
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
 	end
-	-- vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 	vim.keymap.set(mode, lhs, rhs, options)
 end
 
@@ -44,8 +43,8 @@ map("n", "<C-h>", "<C-w>h") -- window left
 map("n", "<C-j>", "<C-w>j") -- window down
 map("n", "<C-l>", "<C-w>l") -- window right
 
--- Buffers -- list all buffers -- <C-d> to delete buff
-map("n", "<space>b", ":Telescope buffers<CR>")
+-- Buffers
+map("n", "<space>b", ":Telescope buffers<CR>") -- list all buffers
 map("n", "<space>qb", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
 
 -- Tabs
@@ -64,6 +63,7 @@ map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
 
 map({ "n", "v" }, ">", ">>") -- quick indent
 map({ "n", "v" }, "<", "<<") -- quick indent
+
 -- Stay in indent mode
 map("v", "<", "<gv")
 map("v", ">", ">gv")
@@ -90,6 +90,7 @@ map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in curre
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- Telescope file browser
+
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
