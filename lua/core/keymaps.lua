@@ -18,11 +18,11 @@ vim.g.mapleader = ","
 -- Neovim shortcuts
 -----------------------------------------------------------
 
--- Disable arrow keys
-map("", "<up>", "<nop>")
-map("", "<left>", "<nop>")
-map("", "<down>", "<nop>")
-map("", "<right>", "<nop>")
+-- disable arrow keys
+local arrow_keys = { "<up>", "<left>", "<down>", "<right>" }
+for _, arrow_key in pairs(arrow_keys) do
+	map("", arrow_key, "<nop>")
+end
 
 map({ "n", "v" }, "H", "_") -- H to go the start of line(n)
 map({ "n", "v" }, "L", "$") -- L to go to the end of line(n)
@@ -43,18 +43,7 @@ map("n", "<C-h>", "<C-w>h") -- window left
 map("n", "<C-j>", "<C-w>j") -- window down
 map("n", "<C-l>", "<C-w>l") -- window right
 
--- Buffers
-map("n", "<space>b", ":Telescope buffers<CR>") -- list all buffers
 map("n", "<space>qb", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
-
--- Tabs
-map("n", "<space>tt", ":tabedit<CR>") -- open buffer in new tab
-map("n", "<space>tn", ":tabnext<CR>") -- go to next tab
-map("n", "<space>tp", ":tabprev<CR>") -- go to prev tab
-map("n", "<space>to", ":tabonly<CR>") -- kill all other tabs
-map("n", "<space>tk", ":tabclose<CR>") -- kill current tab
-map("n", "<space>tmp", ":-tabmove<CR>") -- move current tab to previous position
-map("n", "<space>tmn", ":+tabmove<CR>") -- move current tab to next position
 
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 
@@ -83,7 +72,8 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -----------------------------------------------------------
 
 -- Sneak = Hop + Telescope
-map({ "n", "v" }, "s", "<cmd>HopChar2<CR>")
+map({ "n", "v" }, "s", "<cmd>HopChar2<CR>") -- sneak full
+map({ "n", "v" }, "mw", "<cmd>HopWordCurrentLine<CR>") -- word by line
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 
