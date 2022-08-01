@@ -14,8 +14,6 @@ one_dark.setup({
 })
 one_dark.load()
 
--- statusline color schemes:
--- import with: require('colors').colorscheme_name
 local M = {}
 
 M.onedark_dark = {
