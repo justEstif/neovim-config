@@ -3,21 +3,14 @@ if not actions_status_ok then
 	return
 end
 
-local utils = require("core.utils")
-
 local file_browser = {
 	previewer = false,
 	theme = "ivy",
-	on_complete = { -- start in normal mode
-		utils.start_normal,
-	},
+	initial_mode = "normal",
 	mappings = {
-		["i"] = {
-			-- your custom insert mode mappings
-			["<C-n>"] = actions.close, -- exit
-		},
+		["i"] = {},
 		["n"] = {
-			-- your custom normal mode mappings
+			["<C-n>"] = actions.close, -- exit
 		},
 	},
 }

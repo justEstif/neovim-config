@@ -11,8 +11,6 @@ if not actions_status_ok then
 	return
 end
 
-local utils = require("core.utils")
-
 telescope.setup({
 
 	defaults = {
@@ -44,24 +42,7 @@ telescope.setup({
 			theme = "dropdown",
 			previewer = false,
 			hidden = true,
-			find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }, -- turn off `./`
-		},
-
-		buffers = {
-			theme = "dropdown",
-			previewer = false,
-			on_complete = { -- start in normal mode
-				utils.start_normal,
-			},
-			mappings = { -- easy close buffer shortcut
-				i = {
-					["<C-d>"] = actions.delete_buffer,
-				},
-				n = {
-					["D"] = actions.delete_buffer,
-					["<C-d>"] = actions.delete_buffer,
-				},
-			},
+			find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }, -- turn off "./"
 		},
 
 		oldfiles = {
