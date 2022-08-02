@@ -29,6 +29,7 @@ local options = {
 	cursorline = true, -- Cursorline on
 	showtabline = 0, -- don't show tabline
 	pumheight = 15, -- pop up menu height
+	foldenable = false, -- don't start folded
 	foldtext = string.format("  %s: %d lines", vim.fn.getline(vim.v.foldstart), vim.v.foldend - vim.v.foldstart + 1),
 	fillchars = { eob = "-", fold = " " },
 
