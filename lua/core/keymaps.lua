@@ -71,8 +71,9 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -- Sneak = Hop + Telescope
 map({ "n", "v" }, "s", "<cmd>HopChar2<CR>") -- sneak full
 map({ "n", "v" }, "mw", "<cmd>HopWordCurrentLine<CR>") -- word by line
-map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
+map({ "n", "v" }, "ml", "<cmd>HopLineStart<CR>") -- sneak line
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
+map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file

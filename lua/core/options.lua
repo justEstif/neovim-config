@@ -12,10 +12,7 @@ local options = {
 	completeopt = "menuone,noinsert,noselect", -- Autocomplete options
 
 	-- UI
-	number = true, -- turn on number on current l
-	numberwidth = 1, -- don't pop up curr l-num
-	relativenumber = true, -- relative l-num
-	signcolumn = "auto", -- plugin's gutter width??
+	signcolumn = "yes:1", -- spacing to the right
 	showmatch = true, -- Highlight matching parenthesis
 	colorcolumn = "", -- Line length marker at 80 columns
 	splitright = true, -- Vertical split to the right
