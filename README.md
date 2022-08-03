@@ -1,6 +1,7 @@
 # Minimal Neovim
 
-- Hello, I wanted to share a minimal neovim config for JS developers.
+- ~~Hello, I wanted to share a minimal neovim config for JS developers.~~
+- I don't really consider this config to be minimal anymore, but I tried to keep it well documented to show that everything has a purpose.
 
 - Capabilities:
 
