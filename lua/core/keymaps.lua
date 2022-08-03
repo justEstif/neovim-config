@@ -34,8 +34,6 @@ map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
 map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
 map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
-map("i", "<A-j>", "<Esc>:m .+1<CR>==gi") -- move line up(i)
-map("i", "<A-k>", "<Esc>:m .-2<CR>==gi") -- move line down(i)
 
 -- Window
 map("n", "<C-k>", "<C-w>k") -- window up
@@ -47,7 +45,6 @@ map("n", "<space>qb", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
 
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 
--- Terminal
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
 
 map({ "n", "v" }, ">", ">>") -- quick indent
