@@ -47,17 +47,14 @@ map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
 
-map({ "n", "v" }, ">", ">>") -- quick indent
-map({ "n", "v" }, "<", "<<") -- quick indent
-
--- Stay in indent mode
-map("v", "<", "<gv")
-map("v", ">", ">gv")
+map("n", ">", ">>") -- quick indent
+map("n", "<", "<<") -- quick indent
+map("v", "<", "<gv") -- stay in indent mode
+map("v", ">", ">gv") -- stay in indent mode
 
 map({ "n", "v" }, "<leader>j", "gJ") -- leader j to join lines(n)
 
 map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
-map("n", "<leader>s", ":w<CR>") -- save file
 map("n", "<leader>q", ":qa!<CR>") -- force exit
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 
