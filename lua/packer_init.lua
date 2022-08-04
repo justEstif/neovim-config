@@ -32,6 +32,7 @@ return packer.startup(function(use)
 		"wbthomason/packer.nvim", -- plugin manager
 		"nvim-lua/plenary.nvim", -- important package used by most
 		"nvim-treesitter/nvim-treesitter", -- code highlighting
+		"kyazdani42/nvim-tree.lua", -- file explorer
 	})
 
 	use({ -- lsp/formating

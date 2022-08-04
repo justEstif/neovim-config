@@ -72,8 +72,8 @@ map({ "n", "v" }, "ml", "<cmd>HopLineStart<CR>") -- sneak line
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
-map("n", "<C-n>", ":Telescope file_browser<CR>") -- Telescope file browser
 
+map('n', '<C-n>', ':NvimTreeToggle<CR>') -- open/close
 -- Trouble
 map("n", "<space>xa", "<cmd>Trouble<cr>")
 map("n", "<space>xx", "<cmd>Trouble document_diagnostics<cr>")
