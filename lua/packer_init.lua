@@ -40,11 +40,6 @@ return packer.startup(function(use)
 		"jose-elias-alvarez/null-ls.nvim", -- formatter
 	})
 
-	use({
-		"folke/trouble.nvim", -- better lsp error output
-		requires = "kyazdani42/nvim-web-devicons",
-	})
-
 	use({ -- completion/cmp
 		"hrsh7th/nvim-cmp", -- cmp plugin
 		"hrsh7th/cmp-nvim-lsp", -- lsp cmp
