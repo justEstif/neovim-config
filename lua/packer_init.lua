@@ -41,7 +41,7 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"folke/trouble.nvim", -- better error output
+		"folke/trouble.nvim", -- better lsp error output
 		requires = "kyazdani42/nvim-web-devicons",
 	})
 

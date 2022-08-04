@@ -41,8 +41,6 @@ map("n", "<C-h>", "<C-w>h") -- window left
 map("n", "<C-j>", "<C-w>j") -- window down
 map("n", "<C-l>", "<C-w>l") -- window right
 
-map("n", "<space>qb", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
-
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
@@ -55,7 +53,7 @@ map("v", ">", ">gv") -- stay in indent mode
 map({ "n", "v" }, "<leader>j", "gJ") -- leader j to join lines(n)
 
 map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
-map("n", "<leader>q", ":qa!<CR>") -- force exit
+map("n", "<leader>q", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 
 -- open link under cursor
@@ -69,17 +67,16 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 map({ "n", "v" }, "s", "<cmd>HopChar2<CR>") -- sneak full
 map({ "n", "v" }, "mw", "<cmd>HopWordCurrentLine<CR>") -- word by line
 map({ "n", "v" }, "ml", "<cmd>HopLineStart<CR>") -- sneak line
-map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
-map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 
 -- Telescope
+map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
+map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- Telescope file browser
 
 -- Trouble
-map("n", "<space>xx", "<cmd>Trouble<cr>")
-map("n", "<space>xw", "<cmd>Trouble workspace_diagnostics<cr>")
-map("n", "<space>xd", "<cmd>Trouble document_diagnostics<cr>")
+map("n", "<space>xa", "<cmd>Trouble<cr>")
+map("n", "<space>xx", "<cmd>Trouble document_diagnostics<cr>")
 
 -- other keybindings in:
 -- plugins.lsp/handlers
