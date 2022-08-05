@@ -42,12 +42,6 @@ map("n", "<C-h>", "<C-w>h") -- window left
 map("n", "<C-j>", "<C-w>j") -- window down
 map("n", "<C-l>", "<C-w>l") -- window right
 
--- Resize with arrows
-map("n", "<C-Up>", ":resize -2<CR>")
-map("n", "<C-Down>", ":resize +2<CR>")
-map("n", "<C-Left>", ":vertical resize -2<CR>")
-map("n", "<C-Right>", ":vertical resize +2<CR>")
-
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
@@ -66,7 +60,6 @@ map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 -- open link under cursor
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 
-
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
@@ -74,7 +67,7 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -- Sneak = Hop + Telescope
 map({ "n", "v" }, "s", "<cmd>HopChar2<CR>") -- sneak full
 map({ "n", "v" }, "mw", "<cmd>HopWordCurrentLine<CR>") -- word by line
-map({ "n", "v" }, "ml", "<cmd>HopLineStart<CR>") -- sneak line
+map({ "n", "v" }, "ml", "<cmd>HopLine<CR>") -- sneak line
 
 -- Telescope
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
