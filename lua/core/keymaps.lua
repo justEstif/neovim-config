@@ -19,10 +19,10 @@ vim.g.mapleader = ","
 -- Neovim shortcuts
 -----------------------------------------------------------
 
--- disable arrow keys
-local arrow_keys = { "<up>", "<left>", "<down>", "<right>" }
-for _, arrow_key in pairs(arrow_keys) do
-	map("", arrow_key, "<nop>")
+-- disable keys
+local disable_keys = { "<up>", "<left>", "<down>", "<right>" , "gh"}
+for _, disable_key in pairs(disable_keys) do
+	map("", disable_key, "<nop>")
 end
 
 map({ "n", "v" }, "H", "_") -- H to go the start of line(n)
@@ -65,6 +65,7 @@ map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
 
 -- open link under cursor
 map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
+
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
