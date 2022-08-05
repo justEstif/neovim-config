@@ -1,22 +1,15 @@
 -----------------------------------------------------------
 -- File manager configuration file
 -----------------------------------------------------------
--- Plugin: nvim-tree
--- url: https://github.com/kyazdani42/nvim-tree.lua
--- Keybindings are defined in `core/keymaps.lua`:
--- https://github.com/kyazdani42/nvim-tree.lua#keybindings
+
 local status_ok, nvim_tree = pcall(require, 'nvim-tree')
 if not status_ok then
     return
 end
 
--- Call setup:
--- Each of these are documented in `:help nvim-tree.OPTION_NAME`
--- nested options are documented by accessing them with `.` (eg: `:help nvim-tree.view.mappings.list`)
 nvim_tree.setup {
     auto_reload_on_write = true,
     create_in_closed_folder = false,
-    -- disable_netrw = false, -> already disabled on `/core/options.lua`
     hijack_netrw = true,
     hijack_unnamed_buffer_when_opening = false,
     ignore_buffer_on_setup = false,

@@ -1,3 +1,7 @@
+-----------------------------------------------------------
+-- LSP-Installer configuration file
+----------------------------------------------------------
+
 local status_ok_lsp_installer, lsp_installer = pcall(require, "nvim-lsp-installer")
 if not status_ok_lsp_installer then
 	return

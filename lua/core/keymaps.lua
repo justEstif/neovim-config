@@ -1,6 +1,7 @@
 -----------------------------------------------------------
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
+
 local function map(mode, lhs, rhs, opts)
 	local options = {
 		noremap = true,

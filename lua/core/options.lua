@@ -1,6 +1,7 @@
 -----------------------------------------------------------
 -- General Neovim settings and configuration
 -----------------------------------------------------------
+
 local g = vim.g -- Global variables
 local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 
@@ -77,6 +78,4 @@ for _, plugin in pairs(disabled_built_ins) do
 end
 
 -- Other options
-opt.iskeyword:append("-") -- set words with - as 1
-opt.iskeyword:append("_") -- set words with _ as 1
 opt.shortmess:append("sI") -- Disable nvim intro
