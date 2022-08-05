@@ -53,7 +53,6 @@ return packer.startup(function(use)
 
 	use({ -- telescope
 		"nvim-telescope/telescope.nvim",
-		"nvim-telescope/telescope-file-browser.nvim",
 		branch = "0.1.x",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
@@ -97,7 +96,7 @@ return packer.startup(function(use)
 	})
 
 	-- Put this at the end after all plugins
-	if packer_bootstrap then
+	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
 end)
