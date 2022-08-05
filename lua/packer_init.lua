@@ -54,7 +54,7 @@ return packer.startup(function(use)
 	use({ -- telescope
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
-		requires = { "nvim-lua/plenary.nvim" },
+		requires = "nvim-lua/plenary.nvim",
 	})
 
 	use({
@@ -69,7 +69,7 @@ return packer.startup(function(use)
 
 	use({ -- dashboard
 		"goolord/alpha-nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
+		requires = "kyazdani42/nvim-web-devicons",
 	})
 
 	use({
@@ -84,7 +84,7 @@ return packer.startup(function(use)
 
 	use({ -- git labels
 		"lewis6991/gitsigns.nvim",
-		requires = { "nvim-lua/plenary.nvim" },
+    requires = "nvim-lua/plenary.nvim",
 	})
 
 	use({
