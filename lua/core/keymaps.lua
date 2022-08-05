@@ -42,6 +42,12 @@ map("n", "<C-h>", "<C-w>h") -- window left
 map("n", "<C-j>", "<C-w>j") -- window down
 map("n", "<C-l>", "<C-w>l") -- window right
 
+-- Resize with arrows
+map("n", "<C-Up>", ":resize -2<CR>")
+map("n", "<C-Down>", ":resize +2<CR>")
+map("n", "<C-Left>", ":vertical resize -2<CR>")
+map("n", "<C-Right>", ":vertical resize +2<CR>")
+
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal
@@ -74,11 +80,8 @@ map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in curre
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 
-map('n', '<C-n>', ':NvimTreeToggle<CR>') -- open/close
--- Trouble
-map("n", "<space>xa", "<cmd>Trouble<cr>")
-map("n", "<space>xx", "<cmd>Trouble document_diagnostics<cr>")
-
+-- Nvim Tree
+map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
