@@ -11,6 +11,7 @@ local options = {
 	clipboard = "unnamedplus", -- Copy/paste to system clipboard
 	swapfile = false, -- Don't use swapfile
 	completeopt = "menuone,noinsert,noselect", -- Autocomplete options
+	gdefault = true, -- default g flag to search
 
 	-- UI
 	signcolumn = "yes:1", -- spacing to the right
