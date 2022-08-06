@@ -52,6 +52,10 @@ telescope.setup({
 		live_grep = {
 			theme = "ivy",
 		},
+		lsp_references = {
+			theme = "dropdown",
+			initial_mode = "normal",
+		},
 	},
 	extensions = {},
 })
