@@ -61,3 +61,10 @@ autocmd("TermOpen", {
 	pattern = "*",
 	command = "setlocal nonumber norelativenumber",
 })
+
+-- more readable terminal name
+autocmd("TermOpen", {
+	pattern = "*",
+	command = "setlocal statusline=%{b:term_title}",
+})
+
