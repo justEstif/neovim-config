@@ -56,6 +56,10 @@ telescope.setup({
 			theme = "dropdown",
 			initial_mode = "normal",
 		},
+		diagnostics = {
+			theme = "dropdown",
+			initial_mode = "normal",
+		},
 	},
 	extensions = {},
 })
