@@ -20,7 +20,7 @@ vim.g.mapleader = ","
 -----------------------------------------------------------
 
 -- disable keys
-local disable_keys = { "<up>", "<left>", "<down>", "<right>" , "gh", "gl"}
+local disable_keys = { "<up>", "<left>", "<down>", "<right>" , "gh", "gl", "gL"}
 for _, disable_key in pairs(disable_keys) do
 	map("", disable_key, "<nop>")
 end
