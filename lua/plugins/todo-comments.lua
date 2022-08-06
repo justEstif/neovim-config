@@ -7,4 +7,8 @@ if not status_ok then
 	return
 end
 
-todo_comments.setup({})
+todo_comments.setup({
+	highlight = {
+		keyword = "bg", -- "fg", "bg", "wide" or empty.
+	},
+})
