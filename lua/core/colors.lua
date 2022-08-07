@@ -12,19 +12,5 @@ one_dark.setup({
 	style = "darker",
 	colors = { fg = "#b2bbcc" }, --default: #a0a8b7  secondary: #b2bbcc
 })
+
 one_dark.load()
-
-local M = {}
-
-M.onedark_dark = {
-	bg = "#282c34",
-	fg = "#b2bbcc",
-	pink = "#c678dd",
-	green = "#98c379",
-	cyan = "#56b6c2",
-	yellow = "#e5c07b",
-	orange = "#d19a66",
-	red = "#e86671",
-}
-
-return M
