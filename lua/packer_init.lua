@@ -84,13 +84,13 @@ return packer.startup(function(use)
 
 	use({ -- git labels
 		"lewis6991/gitsigns.nvim",
-    requires = "nvim-lua/plenary.nvim",
+		requires = "nvim-lua/plenary.nvim",
 	})
 
 	use({
 		"kylechui/nvim-surround", -- quick surround
 		"feline-nvim/feline.nvim", -- statusline
-		"navarasu/onedark.nvim", -- onedark
+		"ellisonleao/gruvbox.nvim", -- gruvbox
 		"wakatime/vim-wakatime", -- wakatime
 		{ "phaazon/hop.nvim", branch = "v2" }, -- sneak
 	})
