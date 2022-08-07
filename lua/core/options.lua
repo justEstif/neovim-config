@@ -14,7 +14,8 @@ local options = {
 	gdefault = true, -- default g flag to search
 
 	-- UI
-	signcolumn = "yes:1", -- spacing to the right
+	number = true,
+	relativenumber = true,
 	showmatch = true, -- Highlight matching parenthesis
 	colorcolumn = "", -- Line length marker at 80 columns
 	splitright = true, -- Vertical split to the right
