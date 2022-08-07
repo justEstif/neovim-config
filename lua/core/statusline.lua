@@ -58,7 +58,7 @@ local comps = {
 				}
 				return set_color
 			end,
-			left_sep = " ",
+			left_sep = "",
 			right_sep = " ",
 		},
 	},
@@ -82,12 +82,7 @@ local comps = {
 		type = {
 			provider = function()
 				local type = vim.bo.filetype:lower()
-				local extension = vim.fn.expand("%:e")
-				local icon = require("nvim-web-devicons").get_icon(extension)
-				if icon == nil then
-					icon = " "
-				end
-				return " " .. icon .. " " .. type
+				return " " .. type .. " "
 			end,
 			hl = {
 				fg = colors.fg,
@@ -99,41 +94,6 @@ local comps = {
 				},
 			},
 			righ_sep = " ",
-		},
-		-- Line-column
-		position = {
-			provider = {
-				name = "position",
-			},
-			hl = {
-				fg = colors.fg,
-				style = "bold",
-			},
-			left_sep = " ",
-			right_sep = " ",
-		},
-		-- Cursor position in %
-		line_percentage = {
-			provider = {
-				name = "line_percentage",
-			},
-			hl = {
-				fg = colors.cyan,
-				style = "bold",
-			},
-			left_sep = " ",
-			right_sep = " ",
-		},
-		-- Simple scrollbar
-		scroll_bar = {
-			provider = {
-				name = "scroll_bar",
-			},
-			hl = {
-				fg = colors.fg,
-			},
-			left_sep = " ",
-			right_sep = " ",
 		},
 	},
 	-- LSP info
@@ -174,12 +134,12 @@ local comps = {
 	lsp = {
 		name = {
 			provider = "lsp_client_names",
-			icon = "  ",
+			icon = " ",
 			hl = {
 				fg = colors.pink,
 			},
-			left_sep = "  ",
-			right_sep = " ",
+			left_sep = "",
+			right_sep = "",
 		},
 	},
 	-- git info
@@ -187,33 +147,25 @@ local comps = {
 		branch = {
 			provider = "git_branch",
 			icon = " ",
-			hl = {
-				fg = colors.pink,
-			},
+			hl = { fg = colors.pink },
 			left_sep = "  ",
 		},
 		add = {
 			provider = "git_diff_added",
 			icon = "  ",
-			hl = {
-				fg = colors.green,
-			},
+			hl = { fg = colors.green },
 			left_sep = " ",
 		},
 		change = {
 			provider = "git_diff_changed",
 			icon = "  ",
-			hl = {
-				fg = colors.orange,
-			},
+			hl = { fg = colors.orange },
 			left_sep = " ",
 		},
 		remove = {
 			provider = "git_diff_removed",
 			icon = "  ",
-			hl = {
-				fg = colors.red,
-			},
+			hl = { fg = colors.red },
 			left_sep = " ",
 		},
 	},
@@ -232,11 +184,11 @@ table.insert(components.inactive, {})
 -- Right section
 table.insert(components.active[1], comps.vi_mode.left)
 table.insert(components.active[1], comps.file.info)
+table.insert(components.inactive[1], comps.file.info)
 table.insert(components.active[1], comps.git.branch)
 table.insert(components.active[1], comps.git.add)
 table.insert(components.active[1], comps.git.change)
 table.insert(components.active[1], comps.git.remove)
-table.insert(components.inactive[1], comps.file.info)
 
 -- Left Section
 table.insert(components.active[2], comps.diagnos.err)
@@ -245,7 +197,6 @@ table.insert(components.active[2], comps.diagnos.hint)
 table.insert(components.active[2], comps.diagnos.info)
 table.insert(components.active[2], comps.lsp.name)
 table.insert(components.active[2], comps.file.type)
-table.insert(components.active[2], comps.file.position)
 
 -- Call feline
 feline.setup({
