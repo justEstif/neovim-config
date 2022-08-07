@@ -2,15 +2,27 @@
 -- Color schemes configuration file
 -----------------------------------------------------------
 
-local status_ok_one_dark, one_dark = pcall(require, "onedark")
-if not status_ok_one_dark then
+local gruvbox_ok, gruvbox = pcall(require, "gruvbox")
+if not gruvbox_ok then
 	return
 end
 
--- OneDark styles: dark, darker, cool, deep, warm, warmer, light
-one_dark.setup({
-	style = "darker",
-	colors = { fg = "#b2bbcc" }, --default: #a0a8b7  secondary: #b2bbcc
+gruvbox.setup({
+	undercurl = true,
+	underline = true,
+	bold = true,
+	italic = false,
+	strikethrough = true,
+	invert_selection = false,
+	invert_signs = false,
+	invert_tabline = false,
+	invert_intend_guides = false,
+	inverse = true, -- invert background for search, diffs, statuslines and errors
+	contrast = "", -- can be "hard", "soft" or empty string
+	overrides = {
+		-- SignColumn = { bg = "#ff9900" },
+	},
 })
 
-one_dark.load()
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]]) -- one_dark.load()
