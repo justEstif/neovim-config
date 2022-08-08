@@ -19,9 +19,7 @@ gruvbox.setup({
 	invert_intend_guides = false,
 	inverse = true, -- invert background for search, diffs, statuslines and errors
 	contrast = "", -- can be "hard", "soft" or empty string
-	overrides = {
-		-- SignColumn = { bg = "#ff9900" },
-	},
+	overrides = {},
 })
 
 vim.o.background = "dark" -- or "light" for light mode
