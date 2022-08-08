@@ -43,6 +43,12 @@ map("n", "<C-h>", "<C-w>h") -- window left
 map("n", "<C-j>", "<C-w>j") -- window down
 map("n", "<C-l>", "<C-w>l") -- window right
 
+-- Resize with arrows
+map("n", "<C-Up>", ":resize -2<CR>")
+map("n", "<C-Down>", ":resize +2<CR>")
+map("n", "<C-Left>", ":vertical resize +2<CR>")
+map("n", "<C-Right>", ":vertical resize -2<CR>")
+
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
 
 map("t", "<Esc>", "<C-\\><C-n>") -- esc exit terminal

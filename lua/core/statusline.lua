@@ -137,7 +137,7 @@ local comps = {
 		branch = {
 			provider = "git_branch",
 			icon = " ",
-			hl = { fg = colors.pink },
+			hl = { fg = colors.fg },
 			left_sep = "  ",
 		},
 		add = {
