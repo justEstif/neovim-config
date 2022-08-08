@@ -90,7 +90,7 @@ return packer.startup(function(use)
 	use({
 		"kylechui/nvim-surround", -- quick surround
 		"feline-nvim/feline.nvim", -- statusline
-		"ellisonleao/gruvbox.nvim", -- gruvbox
+		"rmehri01/onenord.nvim", -- nord
 		"wakatime/vim-wakatime", -- wakatime
 		{ "phaazon/hop.nvim", branch = "v2" }, -- sneak
 	})
