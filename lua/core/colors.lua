@@ -2,25 +2,13 @@
 -- Color schemes configuration file
 -----------------------------------------------------------
 
-local gruvbox_ok, gruvbox = pcall(require, "gruvbox")
-if not gruvbox_ok then
+local one_nord_ok, one_nord = pcall(require, "onenord")
+if not one_nord_ok then
 	return
 end
 
-gruvbox.setup({
-	undercurl = true,
-	underline = true,
-	bold = true,
-	italic = false,
-	strikethrough = true,
-	invert_selection = false,
-	invert_signs = false,
-	invert_tabline = false,
-	invert_intend_guides = false,
-	inverse = true, -- invert background for search, diffs, statuslines and errors
-	contrast = "", -- can be "hard", "soft" or empty string
-	overrides = {},
+one_nord.setup({
+	theme = "dark", -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+	borders = true, -- Split window borders
+	fade_nc = false,
 })
-
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]]) -- one_dark.load()

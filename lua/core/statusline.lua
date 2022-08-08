@@ -7,37 +7,23 @@ if not status_ok then
 	return
 end
 
-local gruvbox_colors = {
-	fg = "#928374",
-	bg = "#1F2223",
-	black = "#1B1B1B",
-	skyblue = "#458588",
-	cyan = "#83a597",
-	green = "#689d6a",
-	oceanblue = "#1d2021",
-	magenta = "#fb4934",
-	orange = "#fabd2f",
-	red = "#cc241d",
-	violet = "#b16286",
-	white = "#ebdbb2",
-	yellow = "#d79921",
-}
+local colors = require("onenord.colors").load()
 
 local vi_mode_colors = {
-	NORMAL = gruvbox_colors.cyan,
-	INSERT = gruvbox_colors.green,
-	VISUAL = gruvbox_colors.yellow,
-	OP = gruvbox_colors.cyan,
-	BLOCK = gruvbox_colors.cyan,
-	REPLACE = gruvbox_colors.red,
-	["V-REPLACE"] = gruvbox_colors.red,
-	ENTER = gruvbox_colors.orange,
-	MORE = gruvbox_colors.orange,
-	SELECT = gruvbox_colors.yellow,
-	COMMAND = gruvbox_colors.pink,
-	SHELL = gruvbox_colors.pink,
-	TERM = gruvbox_colors.pink,
-	NONE = gruvbox_colors.yellow,
+	NORMAL = colors.cyan,
+	INSERT = colors.green,
+	VISUAL = colors.yellow,
+	OP = colors.cyan,
+	BLOCK = colors.cyan,
+	REPLACE = colors.red,
+	["V-REPLACE"] = colors.red,
+	ENTER = colors.orange,
+	MORE = colors.orange,
+	SELECT = colors.yellow,
+	COMMAND = colors.pink,
+	SHELL = colors.pink,
+	TERM = colors.pink,
+	NONE = colors.yellow,
 }
 
 local vi_mode_utils = require("feline.providers.vi_mode")
@@ -56,7 +42,7 @@ local comps = {
 			hl = function()
 				local set_color = {
 					name = vi_mode_utils.get_mode_highlight_name(),
-					fg = gruvbox_colors.bg,
+					fg = colors.bg,
 					bg = vi_mode_utils.get_mode_color(),
 					style = "bold",
 				}
@@ -78,7 +64,7 @@ local comps = {
 				},
 			},
 			hl = {
-				fg = gruvbox_colors.cyan,
+				fg = colors.cyan,
 			},
 			icon = "",
 		},
@@ -89,12 +75,12 @@ local comps = {
 				return " " .. type .. " "
 			end,
 			hl = {
-				fg = gruvbox_colors.fg,
+				fg = colors.fg,
 			},
 			left_sep = {
 				str = " " .. separator,
 				hl = {
-					fg = gruvbox_colors.fg,
+					fg = colors.fg,
 				},
 			},
 			righ_sep = " ",
@@ -106,7 +92,7 @@ local comps = {
 			provider = "diagnostic_errors",
 			icon = " ",
 			hl = {
-				fg = gruvbox_colors.red,
+				fg = colors.red,
 			},
 			left_sep = "  ",
 		},
@@ -114,7 +100,7 @@ local comps = {
 			provider = "diagnostic_warnings",
 			icon = " ",
 			hl = {
-				fg = gruvbox_colors.yellow,
+				fg = colors.yellow,
 			},
 			left_sep = " ",
 		},
@@ -122,7 +108,7 @@ local comps = {
 			provider = "diagnostic_info",
 			icon = " ",
 			hl = {
-				fg = gruvbox_colors.green,
+				fg = colors.green,
 			},
 			left_sep = " ",
 		},
@@ -130,7 +116,7 @@ local comps = {
 			provider = "diagnostic_hints",
 			icon = " ",
 			hl = {
-				fg = gruvbox_colors.cyan,
+				fg = colors.cyan,
 			},
 			left_sep = " ",
 		},
@@ -140,7 +126,7 @@ local comps = {
 			provider = "lsp_client_names",
 			icon = " ",
 			hl = {
-				fg = gruvbox_colors.pink,
+				fg = colors.pink,
 			},
 			left_sep = "",
 			right_sep = "",
@@ -151,25 +137,25 @@ local comps = {
 		branch = {
 			provider = "git_branch",
 			icon = " ",
-			hl = { fg = gruvbox_colors.pink },
+			hl = { fg = colors.pink },
 			left_sep = "  ",
 		},
 		add = {
 			provider = "git_diff_added",
 			icon = " ",
-			hl = { fg = gruvbox_colors.green },
+			hl = { fg = colors.green },
 			left_sep = " ",
 		},
 		change = {
 			provider = "git_diff_changed",
 			icon = " ",
-			hl = { fg = gruvbox_colors.orange },
+			hl = { fg = colors.orange },
 			left_sep = " ",
 		},
 		remove = {
 			provider = "git_diff_removed",
 			icon = " ",
-			hl = { fg = gruvbox_colors.red },
+			hl = { fg = colors.red },
 			left_sep = " ",
 		},
 	},
@@ -205,8 +191,8 @@ table.insert(components.active[2], comps.file.type)
 -- Call feline
 feline.setup({
 	theme = {
-		bg = gruvbox_colors.bg,
-		fg = gruvbox_colors.fg,
+		bg = colors.bg,
+		fg = colors.fg,
 	},
 	components = components,
 	vi_mode_colors = vi_mode_colors,
