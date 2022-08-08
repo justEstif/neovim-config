@@ -8,7 +8,9 @@ if not one_nord_ok then
 end
 
 one_nord.setup({
-	theme = "dark", -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+	theme = "dark", -- dark || light
 	borders = true, -- Split window borders
 	fade_nc = false,
 })
+
+-- vim.cmd([[colorscheme slate]])
