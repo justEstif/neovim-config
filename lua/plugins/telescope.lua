@@ -43,7 +43,7 @@ telescope.setup({
 			theme = "dropdown",
 			previewer = false,
 			hidden = true,
-			find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }, -- turn off "./"
+			find_command = { "fd", "--type", "f", "--strip-cwd-prefix", "-u" }, -- turn off "./", show all
 		},
 		current_buffer_fuzzy_find = {
 			theme = "ivy",
