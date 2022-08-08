@@ -29,7 +29,7 @@ map({ "n", "v" }, "H", "_") -- H to go the start of line(n)
 map({ "n", "v" }, "L", "$") -- L to go to the end of line(n)
 map({ "n", "v" }, "J", "}") -- J to jump previous blocks(n)
 map({ "n", "v" }, "K", "{") -- L to jump next blocks(n)
-map({ "n", "v" }, '"', "%") -- " to jump to matching closer
+map({ "n", "v" }, "'", "%") -- ' to jump to matching closer
 
 map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
 map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
