@@ -7,8 +7,6 @@ if not status_ok then
 	return
 end
 
-local Terminal = require("toggleterm.terminal").Terminal
-
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<C-t>]],
@@ -31,15 +29,3 @@ toggleterm.setup({
 		},
 	},
 })
-
-local lazygit = Terminal:new({
-	cmd = "lazygit",
-	dir = "git_dir",
-	direction = "float",
-})
-
-function LAZYGIT_TOGGLE()
-	lazygit:toggle()
-end
-
-vim.cmd([[ command! Lazygit execute 'lua LAZYGIT_TOGGLE()' ]])
