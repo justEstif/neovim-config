@@ -24,8 +24,8 @@ nvim_tree.setup({
 		width = 32,
 		height = 30,
 		hide_root_folder = false,
-		side = "left",
-		preserve_window_proportions = false,
+		side = "right",
+		preserve_window_proportions = true,
 		number = false,
 		relativenumber = false,
 		signcolumn = "yes",
@@ -34,6 +34,13 @@ nvim_tree.setup({
 			list = {
 				-- user mappings go here
 			},
+		},
+		float = { -- enable float window
+			enable = true,
+			relative = "editor",
+			row = 1,
+			col = 1,
+			border = "rounded",
 		},
 	},
 	renderer = {
@@ -129,7 +136,7 @@ nvim_tree.setup({
 			restrict_above_cwd = false,
 		},
 		open_file = {
-			quit_on_open = false,
+			quit_on_open = true,
 			resize_window = true,
 			window_picker = {
 				enable = true,
