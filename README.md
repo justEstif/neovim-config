@@ -1,21 +1,41 @@
-# Minimal Neovim
+# Neovim Config
 
-- ~~Hello, I wanted to share a minimal neovim config for JS developers.~~
-- I don't really consider this config to be minimal anymore, but I tried to keep it well documented to show that everything has a purpose.
+- Features:
 
-- Capabilities:
+  - LSP:
+    - comes with:
+      - html,
+      - cssls,
+      - tsserver,
+      - sumneko_lua,
+      - jsonls,
+      - tailwindcss
+    - easily extendible
+  - Formatting using Null-ls:
+		- prettier, - TS/JS
+		- eslint, - TS/JS
+		- stylelint, - css
+		- stylua, - lua
+		- rustywind, -- tailwind
+  - Code completion using CMP:
+     - nvim_lsp - LSP completion,
+     - luasnip - snippets,
+     - path - path,
+     - buffer - active buffer,
+     - nvim_lua - nvim cmp,
+  - C-p using Telescope
+    - and other telescope features
 
-  - lsp + auto-complete + snippets
-  - formatting + format on save
-  - telescope == fzf
+- Great JS/TS support:
+  - LSP, formatting, snippets, tailwindcss
+  - JSX comments
 
-- The keymappings are heavily opinionated.
-- I made it using:
+- Comes with a lot of great plugins, and easy to add or remove plugins
+- I have commented often, so most of the code is easy to understand.
+
+- Inspired by:
 
   - <https://github.com/brainfucksec/neovim-lua>
   - <https://github.com/LunarVim/Neovim-from-scratch/>
+  - <https://github.com/doomemacs/doomemacs>
 
-- Besides the plugin requirements, the lsp is setup to work with neovim 0.8
-- You have to initialize npm or yarn for tssserver to work.
-
-- _I will add more details_
