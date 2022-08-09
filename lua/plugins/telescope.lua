@@ -12,6 +12,11 @@ if not actions_status_ok then
 	return
 end
 
+local layout_ok, actions_layout = pcall(require, "telescope.actions.layout")
+if not layout_ok then
+	return
+end
+
 telescope.setup({
 
 	defaults = {
@@ -26,9 +31,11 @@ telescope.setup({
 				["<C-j>"] = actions.move_selection_next, -- next item
 				["<C-k>"] = actions.move_selection_previous, -- previous item
 				["<C-?>"] = actions.which_key, -- available keys
+				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
 			},
 			n = {
 				["<C-?>"] = actions.which_key, -- see options
+				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
 			},
 		},
 
