@@ -1,7 +1,6 @@
 -----------------------------------------------------------
 -- Telescope configuration file
 ----------------------------------------------------------
-
 local telescope_status_ok, telescope = pcall(require, "telescope")
 if not telescope_status_ok then
 	return
@@ -65,6 +64,20 @@ telescope.setup({
 		diagnostics = {
 			theme = "ivy",
 			initial_mode = "normal",
+		},
+		buffers = {
+			theme = "dropdown",
+			initial_mode = "normal",
+			previewer = false,
+			mappings = { -- easy close buffer shortcut
+				i = {
+					["<C-d>"] = actions.delete_buffer,
+				},
+				n = {
+					["D"] = actions.delete_buffer,
+					["<C-d>"] = actions.delete_buffer,
+				},
+			},
 		},
 	},
 	extensions = {},
