@@ -22,9 +22,9 @@ nvim_tree.setup({
 	update_cwd = true,
 	view = {
 		width = 32,
-		height = 30,
+		height = 50,
 		hide_root_folder = false,
-		side = "right",
+		side = "left",
 		preserve_window_proportions = true,
 		number = false,
 		relativenumber = false,
@@ -37,10 +37,6 @@ nvim_tree.setup({
 		},
 		float = { -- enable float window
 			enable = true,
-			relative = "editor",
-			row = 1,
-			col = 1,
-			border = "rounded",
 		},
 	},
 	renderer = {
