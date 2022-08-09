@@ -48,7 +48,7 @@ return packer.startup(function(use)
 		"hrsh7th/cmp-buffer", -- buffer cmp
 		"saadparwaiz1/cmp_luasnip", -- snippets cmp
 		"L3MON4D3/LuaSnip", -- snippets engine
-		"rafamadriz/friendly-snippets", -- snippets
+		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
 	use({ -- telescope
@@ -73,11 +73,6 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"kyazdani42/nvim-web-devicons", -- icons
-		{ "akinsho/toggleterm.nvim", tag = "v2.*" }, -- better terminal
-	})
-
-	use({
 		"lukas-reineke/indent-blankline.nvim", -- indent line
 		"windwp/nvim-autopairs", -- autopair
 	})
@@ -91,10 +86,12 @@ return packer.startup(function(use)
 		"kylechui/nvim-surround", -- quick surround
 		"feline-nvim/feline.nvim", -- statusline
 		"wakatime/vim-wakatime", -- wakatime
-		{ "phaazon/hop.nvim", branch = "v2" }, -- sneak
 	})
 
-	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" })
+	use({ "kyazdani42/nvim-web-devicons" }) -- icons
+	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
+	use({ "phaazon/hop.nvim", branch = "v2" }) -- sneak
+	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
