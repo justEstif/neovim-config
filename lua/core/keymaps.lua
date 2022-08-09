@@ -79,6 +79,7 @@ map({ "n", "v" }, "ml", "<cmd>HopLine<CR>") -- sneak line
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
+map("n", "<space>b", ":Telescope buffers<CR>") -- list all buffers
 
 -- Nvim Tree
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
