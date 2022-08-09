@@ -90,10 +90,11 @@ return packer.startup(function(use)
 	use({
 		"kylechui/nvim-surround", -- quick surround
 		"feline-nvim/feline.nvim", -- statusline
-		"rmehri01/onenord.nvim", -- nord
 		"wakatime/vim-wakatime", -- wakatime
 		{ "phaazon/hop.nvim", branch = "v2" }, -- sneak
 	})
+
+	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" })
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
