@@ -2,15 +2,19 @@
 -- Color schemes configuration file
 -----------------------------------------------------------
 
-local one_nord_ok, one_nord = pcall(require, "onenord")
-if not one_nord_ok then
+local nightfox_ok, nightfox = pcall(require, "nightfox")
+if not nightfox_ok then
 	return
 end
 
-one_nord.setup({
-	theme = "dark", -- dark || light
-	borders = true, -- Split window borders
-	fade_nc = false,
+nightfox.setup({
+  options = {
+    styles = {
+      comments = "italic",
+      keywords = "bold",
+      types = "italic,bold",
+    }
+  }
 })
 
--- vim.cmd([[colorscheme slate]])
+vim.cmd("colorscheme nordfox")
