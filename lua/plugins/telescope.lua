@@ -57,7 +57,7 @@ telescope.setup({
 			initial_mode = "normal",
 		},
 		diagnostics = {
-			theme = "dropdown",
+			theme = "ivy",
 			initial_mode = "normal",
 		},
 	},
