@@ -1,4 +1,5 @@
 -- Import Lua modules
+
 require("packer_init")
 require("core.autocmds")
 require("core.colors")

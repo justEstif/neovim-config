@@ -67,4 +67,3 @@ autocmd("TermOpen", {
 	pattern = "*",
 	command = "setlocal statusline=%{b:term_title}",
 })
-
