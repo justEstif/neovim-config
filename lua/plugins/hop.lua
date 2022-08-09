@@ -7,6 +7,4 @@ if not status_ok then
 	return
 end
 
-hop.setup({
-	keys = "etovxqpdygfblzhckisuran",
-})
+hop.setup({})
