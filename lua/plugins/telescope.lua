@@ -66,9 +66,8 @@ telescope.setup({
 			initial_mode = "normal",
 		},
 		buffers = {
-			theme = "dropdown",
+			theme = "ivy",
 			initial_mode = "normal",
-			previewer = false,
 			mappings = { -- easy close buffer shortcut
 				i = {
 					["<C-d>"] = actions.delete_buffer,
