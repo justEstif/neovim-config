@@ -28,7 +28,7 @@
 
 - Great JS/TS support:
   - LSP, formatting, snippets, tailwindcss
-  - JSX comments
+  - JSX comments, html tag completion
 
 - Comes with a lot of great plugins, and easy to add or remove plugins
 - I have commented often, so most of the code is easy to understand.
