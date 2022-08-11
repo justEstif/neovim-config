@@ -71,8 +71,6 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 
 -- Sneak = Hop + Telescope
 map({ "n", "v" }, "s", "<cmd>HopChar2<CR>") -- sneak full
-map({ "n", "v" }, "f", "<cmd>HopChar1CurrentLine<CR>") -- sneak full
-map({ "n", "v" }, "mw", "<cmd>HopWordCurrentLine<CR>") -- word by line
 map({ "n", "v" }, "ml", "<cmd>HopLine<CR>") -- sneak line
 
 -- Telescope
@@ -87,5 +85,6 @@ map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
 -- plugins.telescope
--- plugins.tree
--- plugins.toggleterm
+-- plugins.tree -
+-- plugins.toggleterm -> <C-t>
+-- plugins.mini -> remapped f/F/t/T
