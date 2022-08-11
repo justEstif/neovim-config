@@ -78,7 +78,6 @@ map(
 	"t",
 	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection, current_line_only = true, hint_offset = -1 })<cr>"
 )
-map({ "n", "v" }, "mw", "<cmd>HopWordCurrentLine<CR>") -- word by line
 map({ "n", "v" }, "ml", "<cmd>HopLine<CR>") -- sneak line
 
 -- Telescope
