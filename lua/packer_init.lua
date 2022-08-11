@@ -61,7 +61,7 @@ return packer.startup(function(use)
 		"numToStr/Comment.nvim", -- comments
 		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments
 		"windwp/nvim-ts-autotag", -- autoclose and autorename html tags
-  })
+	})
 
 	use({
 		"folke/todo-comments.nvim", -- todo comment highlighting
