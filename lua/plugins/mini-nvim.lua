@@ -10,6 +10,6 @@ end
 mini_jump.setup({
 	delay = {
 		highlight = 150,
-		idle_stop = 10000000,
+		idle_stop = 1000,
 	},
 })
