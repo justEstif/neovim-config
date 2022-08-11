@@ -91,8 +91,9 @@ return packer.startup(function(use)
 
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
-	use({ "phaazon/hop.nvim", branch = "v2" }) -- sneak
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
+	use({ "phaazon/hop.nvim", branch = "v2" }) -- sneak with s
+	use({ "echasnovski/mini.nvim" }) -- clever f
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
