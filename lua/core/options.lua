@@ -27,7 +27,6 @@ local options = {
 	linebreak = true, -- Wrap on word boundary
 	termguicolors = true, -- Enable 24-bit RGB colors
 	laststatus = 3, -- Set global statusline
-	scrolloff = 5, -- Number of lines above and below cursor
 	cursorline = true, -- Cursorline on
 	showtabline = 0, -- don't show tabline
 	pumheight = 15, -- pop up menu height
