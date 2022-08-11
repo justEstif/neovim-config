@@ -74,10 +74,9 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 map({ "n", "v" }, "s", "<cmd>HopChar2<CR>") -- sneak full
 map({ "n", "v" }, "f", "<cmd>HopChar1CurrentLine<CR>") -- sneak full
 map(
-	"",
+	{ "n", "v" },
 	"t",
-	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection, current_line_only = true, hint_offset = -1 })<cr>",
-	{}
+	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection, current_line_only = true, hint_offset = -1 })<cr>"
 )
 map({ "n", "v" }, "mw", "<cmd>HopWordCurrentLine<CR>") -- word by line
 map({ "n", "v" }, "ml", "<cmd>HopLine<CR>") -- sneak line
