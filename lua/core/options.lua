@@ -14,8 +14,10 @@ local options = {
 	gdefault = true, -- default g flag to search
 
 	-- UI
-	number = true,
-	relativenumber = true,
+	number = true, -- true of number
+	relativenumber = true, -- relative numebr
+	numberwidth = 1, -- width of number
+	signcolumn = "yes:1", -- sign column default size
 	showmatch = true, -- Highlight matching parenthesis
 	colorcolumn = "", -- Line length marker at 80 columns
 	splitright = true, -- Vertical split to the right
