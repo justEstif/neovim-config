@@ -19,3 +19,6 @@
   - If not floating, it will reset to equal size
 
 - Looks great using ubuntu mono Nerd font
+
+- Ideas
+  - `;` using this to do stuff
