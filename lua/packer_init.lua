@@ -73,11 +73,6 @@ return packer.startup(function(use)
 		requires = "kyazdani42/nvim-web-devicons",
 	})
 
-	use({
-		"lukas-reineke/indent-blankline.nvim", -- indent line
-		"windwp/nvim-autopairs", -- autopair
-	})
-
 	use({ -- git labels
 		"lewis6991/gitsigns.nvim",
 		requires = "nvim-lua/plenary.nvim",
@@ -89,6 +84,7 @@ return packer.startup(function(use)
 		"wakatime/vim-wakatime", -- wakatime
 	})
 
+	use({ "lukas-reineke/indent-blankline.nvim" }) -- indentline
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme

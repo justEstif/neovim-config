@@ -13,3 +13,16 @@ mini_jump.setup({
 		idle_stop = 1000,
 	},
 })
+
+
+local status_pair, mini_pairs = pcall(require, "mini.pairs")
+if not status_pair then
+	return
+end
+
+mini_pairs.setup({
+ mappings = {
+    ['<'] = { action = 'open', pair = '<>', neigh_pattern = '[^\\].' },
+    ['>'] = { action = 'close', pair = '<>', neigh_pattern = '[^\\].' },
+  },
+})
