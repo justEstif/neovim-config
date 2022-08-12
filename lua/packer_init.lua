@@ -84,11 +84,11 @@ return packer.startup(function(use)
 		"wakatime/vim-wakatime", -- wakatime
 	})
 
+	use({ "ggandor/leap.nvim" }) -- sneak
 	use({ "lukas-reineke/indent-blankline.nvim" }) -- indentline
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
-	use({ "phaazon/hop.nvim", branch = "v2" }) -- sneak with s
 	use({ "echasnovski/mini.nvim" }) -- clever f
 
 	-- Put this at the end after all plugins
@@ -96,3 +96,4 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
+

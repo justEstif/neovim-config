@@ -69,10 +69,6 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
 
--- Sneak = Hop + Telescope
-map({ "n", "v" }, "s", "<cmd>HopChar2<CR>") -- sneak full
-map({ "n", "v" }, "ml", "<cmd>HopLine<CR>") -- sneak line
-
 -- Telescope
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
@@ -88,3 +84,4 @@ map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
 -- plugins.tree -
 -- plugins.toggleterm -> <C-t>
 -- plugins.mini -> remapped f/F/t/T
+-- plugins.hop -> remapped s/S
