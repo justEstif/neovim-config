@@ -14,7 +14,7 @@ local options = {
 	gdefault = true, -- default g flag to search
 
 	-- UI
-	number = true, -- true of number
+	number = true, -- line number
 	relativenumber = true, -- relative numebr
 	numberwidth = 1, -- width of number
 	signcolumn = "yes:1", -- sign column default size
