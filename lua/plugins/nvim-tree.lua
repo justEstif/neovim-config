@@ -25,17 +25,13 @@ nvim_tree.setup({
 		hide_root_folder = true,
 		side = "left",
 		preserve_window_proportions = true,
-		number = false,
-		relativenumber = false,
+		number = true,
+		relativenumber = true,
 		signcolumn = "no",
-		float = { -- enable float window
-			enable = true,
-		},
+		float = { enable = true }, -- enable float window
 		mappings = {
 			custom_only = false,
-			list = {
-				-- user mappings go here
-			},
+			list = {}, -- user mappings go here
 		},
 	},
 	renderer = {
