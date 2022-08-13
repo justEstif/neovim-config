@@ -51,16 +51,15 @@ return packer.startup(function(use)
 		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
+	use({
+		"numToStr/Comment.nvim", -- comments
+		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments
+	})
+
 	use({ -- telescope
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
 		requires = "nvim-lua/plenary.nvim",
-	})
-
-	use({
-		"numToStr/Comment.nvim", -- comments
-		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments
-		"windwp/nvim-ts-autotag", -- autoclose and autorename html tags
 	})
 
 	use({
@@ -78,17 +77,15 @@ return packer.startup(function(use)
 		requires = "nvim-lua/plenary.nvim",
 	})
 
-	use({
-		"kylechui/nvim-surround", -- quick surround
-		"feline-nvim/feline.nvim", -- statusline
-		"wakatime/vim-wakatime", -- wakatime
-	})
-
-	use({ "ggandor/leap.nvim" }) -- sneak
+	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
+	use({ "kylechui/nvim-surround" }) -- quick surround
+	use({ "feline-nvim/feline.nvim" }) -- statusline
+	use({ "wakatime/vim-wakatime" }) --wakatime
 	use({ "lukas-reineke/indent-blankline.nvim" }) -- indentline
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
+	use({ "ggandor/leap.nvim" }) -- clever s
 	use({ "echasnovski/mini.nvim" }) -- clever f
 
 	-- Put this at the end after all plugins
@@ -96,4 +93,3 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
-
