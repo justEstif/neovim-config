@@ -90,7 +90,7 @@ nvim_tree.setup({
 		auto_open = true,
 	},
 	update_focused_file = {
-		enable = true,
+		enable = false,
 		update_cwd = true,
 		ignore_list = {},
 	},
@@ -138,9 +138,7 @@ nvim_tree.setup({
 				},
 			},
 		},
-		remove_file = {
-			close_window = true,
-		},
+		remove_file = { close_window = true },
 	},
 	trash = {
 		cmd = "trash",
