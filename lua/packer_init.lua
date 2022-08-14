@@ -81,7 +81,6 @@ return packer.startup(function(use)
 	use({ "kylechui/nvim-surround" }) -- quick surround
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "wakatime/vim-wakatime" }) --wakatime
-	use({ "lukas-reineke/indent-blankline.nvim" }) -- indentline
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
