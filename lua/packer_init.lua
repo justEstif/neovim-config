@@ -63,11 +63,6 @@ return packer.startup(function(use)
 	})
 
 	use({
-		"nvim-telescope/telescope-fzf-native.nvim", -- telescope extension
-		run = "make",
-	})
-
-	use({
 		"folke/todo-comments.nvim", -- todo comment highlighting
 		requires = "nvim-lua/plenary.nvim",
 	})
@@ -90,7 +85,7 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "ggandor/leap.nvim" }) -- clever s
-	use({ "echasnovski/mini.nvim" }) -- clever f
+	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent:W
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

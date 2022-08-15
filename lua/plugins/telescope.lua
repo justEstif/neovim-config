@@ -48,7 +48,14 @@ telescope.setup({
 		find_files = {
 			theme = "dropdown",
 			previewer = false,
-			find_command = { "fd", "--type", "f", "--strip-cwd-prefix", "-u" }, -- turn off "./", show all
+			find_command = {
+				"fd",
+				".",
+				"--type",
+				"file",
+				"--strip-cwd-prefix",
+				"-u",
+			},
 		},
 		current_buffer_fuzzy_find = {
 			theme = "ivy",
@@ -79,14 +86,5 @@ telescope.setup({
 			},
 		},
 	},
-	extensions = {
-		fzf = {
-			fuzzy = true,
-			override_genearic_sorter = false,
-			override_file_sorter = true,
-			case_mode = "smart_case",
-		},
-	},
+	extensions = {},
 })
-
-telescope.load_extension("fzf")
