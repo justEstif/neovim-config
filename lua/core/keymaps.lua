@@ -37,6 +37,19 @@ map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
 map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
+-- Tabs
+map("n", "<leader>tt", ":tabedit<CR>") -- open buffer in new tab
+map("n", "<leader>tn", ":tabnext<CR>") -- go to next tab
+map("n", "<leader>tp", ":tabprev<CR>") -- go to prev tab
+map("n", "<leader>to", ":tabonly<CR>") -- kill all other tabs
+map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
+
+-- Buffers
+map("n", "<leader>bn", ":bn<CR>") -- next buffer(n)
+map("n", "<leader>bp", ":bp<CR>") -- previous buffer(n)
+map("n", "<leader>bk", ":lua MiniBufremove.delete()<cr>") -- delete current buffer
+map("n", "<leader>bl", ":Telescope buffers<CR>") -- list all buffers
+
 -- Window
 map("n", "<C-k>", "<C-w>k") -- window up
 map("n", "<C-h>", "<C-w>h") -- window left
@@ -73,7 +86,6 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
-map("n", "<space>b", ":Telescope buffers<CR>") -- list all buffers
 
 -- Nvim Tree
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
