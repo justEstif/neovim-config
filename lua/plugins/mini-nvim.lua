@@ -43,4 +43,12 @@ end
 
 mini_indentscope.setup({
 	draw = { delay = 0 },
+	symbol = "𑗄",
 })
+
+local status_bufremove, mini_bufremove = pcall(require, "mini.bufremove")
+if not status_bufremove then
+	return
+end
+
+mini_bufremove.setup({})
