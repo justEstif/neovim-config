@@ -63,6 +63,11 @@ return packer.startup(function(use)
 	})
 
 	use({
+		"nvim-telescope/telescope-fzf-native.nvim", -- telescope extension
+		run = "make",
+	})
+
+	use({
 		"folke/todo-comments.nvim", -- todo comment highlighting
 		requires = "nvim-lua/plenary.nvim",
 	})
