@@ -32,7 +32,7 @@ if not status_tabline then
 end
 
 mini_tabline.setup({
-	show_icons = false,
+	show_icons = true,
 	tabpage_section = "right",
 })
 
