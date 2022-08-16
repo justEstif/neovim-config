@@ -14,13 +14,12 @@ local options = {
 	gdefault = true, -- default g flag to search
 
 	-- UI
-	number = true, -- line number
+	number = true, -- true of number
 	relativenumber = true, -- relative numebr
 	numberwidth = 1, -- width of number
 	signcolumn = "yes:1", -- sign column default size
-	linebreak = false, -- turn off wrap on word boundary
-	wrap = false, -- turn off wrap
-	sidescroll = 1, -- enable sidescroll
+  linebreak = true, -- Wrap on word boundary
+	sidescroll = 1, -- move words to the to allow horizontal scroll
 	showmatch = true, -- Highlight matching parenthesis
 	colorcolumn = "", -- Line length marker at 80 columns
 	splitright = true, -- Vertical split to the right

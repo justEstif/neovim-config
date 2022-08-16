@@ -1,4 +1,5 @@
 - Keymaps to use more
+
   - `:jumps`
     - `C-o`: last jump
     - `C-i`: next jump
@@ -10,9 +11,17 @@
 - https://github.com/vim-ctrlspace/vim-ctrlspace
 - https://sfconservancy.org/GiveUpGitHub/
 - I use the floating terminal and file browser because if I resize the different windows, the keep their proportions
+
   - If not floating, it will reset to equal size
 
 - Looks great using ubuntu mono Nerd font
 
 - Ideas
+
   - `;` using this to do stuff
+
+- Using:
+  - Konsole: KDE terminal emulator with
+    - Noridic Theme and custom background image
+  - Nightfox plugin nordfox theme
+  - ![Screenshot](media/screenshot.png)
