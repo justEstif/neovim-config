@@ -19,9 +19,3 @@
 - Ideas
 
   - `;` using this to do stuff
-
-- Using:
-  - Konsole: KDE terminal emulator with
-    - Noridic Theme and custom background image
-  - Nightfox plugin nordfox theme
-  - ![Screenshot](media/screenshot.png)
