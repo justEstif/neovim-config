@@ -11,29 +11,35 @@ local options = {
 	clipboard = "unnamedplus", -- Copy/paste to system clipboard
 	swapfile = false, -- Don't use swapfile
 	completeopt = "menuone,noinsert,noselect", -- Autocomplete options
-	gdefault = true, -- default g flag to search
 
-	-- UI
+	-- Search
+	ignorecase = true, -- Ignore case letters when search
+	smartcase = true, -- Ignore lowercase for the whole pattern
+	gdefault = true, -- default g flag to search
+	showmatch = true, -- Highlight matching parenthesis
+
+	-- Line Number
 	number = true, -- true of number
 	relativenumber = true, -- relative numebr
 	numberwidth = 1, -- width of number
 	signcolumn = "yes:1", -- sign column default size
-  linebreak = true, -- Wrap on word boundary
+
+	-- Fold
+	foldenable = false, -- don't start folded
+	foldtext = string.format("  %s: %d lines", vim.fn.getline(vim.v.foldstart), vim.v.foldend - vim.v.foldstart + 1),
+	fillchars = { eob = "-", fold = " " },
+
+	-- UI
+	linebreak = true, -- Wrap on word boundary
 	sidescroll = 1, -- move words to the to allow horizontal scroll
-	showmatch = true, -- Highlight matching parenthesis
 	colorcolumn = "", -- Line length marker at 80 columns
 	splitright = true, -- Vertical split to the right
 	splitbelow = true, -- Horizontal split to the bottom
-	ignorecase = true, -- Ignore case letters when search
-	smartcase = true, -- Ignore lowercase for the whole pattern
 	termguicolors = true, -- Enable 24-bit RGB colors
 	laststatus = 3, -- Set global statusline
 	cursorline = true, -- Cursorline on
 	showtabline = 0, -- don't show tabline
 	pumheight = 15, -- pop up menu height
-	foldenable = false, -- don't start folded
-	foldtext = string.format("  %s: %d lines", vim.fn.getline(vim.v.foldstart), vim.v.foldend - vim.v.foldstart + 1),
-	fillchars = { eob = "-", fold = " " },
 
 	-- Tabs, indent
 	expandtab = true, -- Use spaces instead of tabs
