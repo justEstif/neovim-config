@@ -48,9 +48,9 @@ telescope.setup({
 		find_files = {
 			theme = "dropdown",
 			previewer = false,
-			cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1], -- stay on git level
 			find_command = {
 				"fd",
+				"..",
 				"--type",
 				"file",
 				"--strip-cwd-prefix",
