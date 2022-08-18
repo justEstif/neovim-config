@@ -46,7 +46,7 @@ local options = {
 
 	-- Memory, CPU
 	hidden = true, -- Enable background buffers
-	history = 100, -- Remember N lines in history
+	history = 200, -- Remember N lines in history
 	synmaxcol = 240, -- Max column for syntax highlight
 	lazyredraw = true, -- Faster scrolling
 	updatetime = 300, -- ms to wait for trigger an event
