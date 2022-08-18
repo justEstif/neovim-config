@@ -33,7 +33,6 @@ end
 
 mini_tabline.setup({
 	show_icons = false,
-	tabpage_section = "right",
 })
 
 local status_indentscope, mini_indentscope = pcall(require, "mini.indentscope")
