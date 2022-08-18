@@ -31,8 +31,6 @@ local options = {
 
 	-- UI
 	linebreak = true, -- Wrap on word boundary
-	sidescroll = 1, -- move words to the to allow horizontal scroll
-	colorcolumn = "", -- Line length marker at 80 columns
 	splitright = true, -- Vertical split to the right
 	splitbelow = true, -- Horizontal split to the bottom
 	termguicolors = true, -- Enable 24-bit RGB colors
