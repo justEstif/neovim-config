@@ -43,13 +43,14 @@ autocmd("Filetype", {
 	command = "setlocal cc=0",
 })
 
--- Save folds on exit and load on start
+-- Save folds on exit
 augroup("AutoSaveFolds", {})
 autocmd("BufWinLeave", {
 	group = "AutoSaveFolds",
 	pattern = "*",
 	command = "silent! mkview",
 })
+-- Load folds on start
 autocmd("BufWinEnter", {
 	group = "AutoSaveFolds",
 	pattern = "*",
