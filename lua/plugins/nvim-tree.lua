@@ -22,7 +22,7 @@ nvim_tree.setup({
 	update_cwd = true,
 	view = {
 		width = 40,
-		hide_root_folder = true,
+		hide_root_folder = false,
 		side = "left",
 		preserve_window_proportions = true,
 		number = true,
