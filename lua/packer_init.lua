@@ -51,11 +51,19 @@ return packer.startup(function(use)
 		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
-
 	use({ -- telescope
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
 		requires = "nvim-lua/plenary.nvim",
+	})
+
+	use({
+		"iamcco/markdown-preview.nvim", -- markdown previewer
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
 	})
 
 	use({
@@ -83,7 +91,6 @@ return packer.startup(function(use)
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "ggandor/leap.nvim" }) -- clever s
 	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent:W
-
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
