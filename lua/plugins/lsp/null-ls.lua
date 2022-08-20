@@ -15,10 +15,8 @@ local code_actions = null_ls.builtins.code_actions
 null_ls.setup({
 	debug = true,
 	sources = {
-		formatting.prettier_d_slim.with({ extra_args = { "--no-semi" } }),
+		formatting.prettier_d_slim,
 		code_actions.eslint_d,
-		-- formatting.prettier.with({ extra_args = { "--no-semi" } }),
-		-- code_actions.eslint,
 		diagnostics.stylelint, -- css
 		formatting.stylua, -- lua
 		formatting.rustywind, -- tailwind
