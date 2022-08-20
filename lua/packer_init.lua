@@ -51,10 +51,6 @@ return packer.startup(function(use)
 		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
-	use({
-		"numToStr/Comment.nvim", -- comments
-		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comments
-	})
 
 	use({ -- telescope
 		"nvim-telescope/telescope.nvim",
@@ -80,6 +76,7 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "kylechui/nvim-surround" }) -- quick surround
 	use({ "feline-nvim/feline.nvim" }) -- statusline
+	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 	use({ "wakatime/vim-wakatime" }) --wakatime
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
