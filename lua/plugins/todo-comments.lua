@@ -11,4 +11,8 @@ todo_comments.setup({
 	highlight = {
 		keyword = "bg", -- "fg", "bg", "wide" or empty.
 	},
+	keywords = {
+		IDEA = { icon = "", color = "hint" },
+		QUESTION = { icon = "", color = "hint" },
+	},
 })
