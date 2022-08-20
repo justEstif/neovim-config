@@ -25,4 +25,10 @@ nvim_treesitter.setup({
 		additional_vim_regex_highlighting = true,
 	},
 	auto_install = true, -- auto install when missing parsers
+
+  -- Comment settings
+	context_commentstring = {
+		enable = true,
+		enable_autocmd = false,
+	},
 })

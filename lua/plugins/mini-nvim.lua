@@ -2,6 +2,7 @@
 -- Mini configuration file
 ----------------------------------------------------------
 
+-- Mini jump
 local status_jump, mini_jump = pcall(require, "mini.jump")
 if not status_jump then
 	return
@@ -14,6 +15,7 @@ mini_jump.setup({
 	},
 })
 
+-- Mini pairs
 local status_pair, mini_pairs = pcall(require, "mini.pairs")
 if not status_pair then
 	return
@@ -26,6 +28,7 @@ mini_pairs.setup({
 	},
 })
 
+-- Mini tabline
 local status_tabline, mini_tabline = pcall(require, "mini.tabline")
 if not status_tabline then
 	return
@@ -35,6 +38,7 @@ mini_tabline.setup({
 	show_icons = false,
 })
 
+-- Mini indent
 local status_indentscope, mini_indentscope = pcall(require, "mini.indentscope")
 if not status_indentscope then
 	return
@@ -45,9 +49,24 @@ mini_indentscope.setup({
 	symbol = "𑗄",
 })
 
+-- Mini bufremove
 local status_bufremove, mini_bufremove = pcall(require, "mini.bufremove")
 if not status_bufremove then
 	return
 end
 
 mini_bufremove.setup({})
+
+-- Mini comment
+local status_comment, mini_comment = pcall(require, "mini.comment")
+if not status_comment then
+	return
+end
+
+mini_comment.setup({
+	hooks = {
+		pre = function()
+			require("ts_context_commentstring.internal").update_commentstring()
+		end,
+	},
+})
