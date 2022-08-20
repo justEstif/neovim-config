@@ -89,7 +89,7 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
-	use({ "ggandor/leap.nvim" }) -- clever s
+	use({ "phaazon/hop.nvim" })-- clever s
 	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent:W
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
