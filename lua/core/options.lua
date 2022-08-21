@@ -30,6 +30,7 @@ local options = {
 	fillchars = { eob = "-", fold = " " },
 
 	-- UI
+	wrap = false,
 	linebreak = true, -- Wrap on word boundary
 	splitright = true, -- Vertical split to the right
 	splitbelow = true, -- Horizontal split to the bottom
