@@ -50,24 +50,15 @@ return packer.startup(function(use)
 		"rafamadriz/friendly-snippets", -- common snippets
 	})
 
-	use({ -- telescope
-		"nvim-telescope/telescope.nvim",
+	use({
+		"nvim-telescope/telescope.nvim", -- telescope
 		"nvim-telescope/telescope-file-browser.nvim", -- telescope file browser
 		branch = "0.1.x",
 		requires = "nvim-lua/plenary.nvim",
 	})
 
-	use({
-		"iamcco/markdown-preview.nvim", -- markdown previewer
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	})
-
-	use({
-		"folke/todo-comments.nvim", -- todo comment highlighting
+	use({ -- todo comment highlighting
+		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
 
