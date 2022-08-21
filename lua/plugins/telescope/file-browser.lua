@@ -6,6 +6,7 @@ end
 local file_browser = {
 	theme = "ivy",
 	initial_mode = "normal",
+	path = "%:p:h", -- open the file_browser from within the folder of your current buffer
 	-- disables netrw and use telescope-file-browser in its place
 	hijack_netrw = true,
 	mappings = {
