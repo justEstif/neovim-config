@@ -32,7 +32,6 @@ return packer.startup(function(use)
 		"wbthomason/packer.nvim", -- plugin manager
 		"nvim-lua/plenary.nvim", -- important package used by most
 		"nvim-treesitter/nvim-treesitter", -- code highlighting
-		"kyazdani42/nvim-tree.lua", -- file explorer
 	})
 
 	use({ -- lsp/formating
@@ -53,6 +52,7 @@ return packer.startup(function(use)
 
 	use({ -- telescope
 		"nvim-telescope/telescope.nvim",
+		"nvim-telescope/telescope-file-browser.nvim", -- telescope file browser
 		branch = "0.1.x",
 		requires = "nvim-lua/plenary.nvim",
 	})
@@ -89,7 +89,7 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
-	use({ "phaazon/hop.nvim" })-- clever s
+	use({ "phaazon/hop.nvim" }) -- clever s
 	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent:W
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

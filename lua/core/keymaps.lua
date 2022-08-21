@@ -88,7 +88,7 @@ map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map({"n", "v"}, 's', ":HopChar2<CR>") -- sneak s
 -- Nvim Tree
-map("n", "<C-n>", ":NvimTreeToggle<CR>") -- open/close
+map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp

@@ -86,5 +86,8 @@ telescope.setup({
 			},
 		},
 	},
-	extensions = {},
+	extensions = {
+    file_browser = require("plugins.telescope.file-browser")
+  },
 })
+telescope.load_extension "file_browser"
