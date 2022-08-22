@@ -65,7 +65,7 @@ M.on_attach = function(client, bufnr)
 	lsp_highlight_document(client)
 
 	-- add lsp that has builtin formatters in order to use null-ls instead
-	local ignored_formatters = { "tsserver", "sumneko_lua" }
+	local ignored_formatters = { "tsserver", "sumneko_lua", "html" }
 	for _, value in ipairs(ignored_formatters) do
 		if value == client.name then
 			client.server_capabilities.document_formatting = false
