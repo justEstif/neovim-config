@@ -36,7 +36,6 @@ local options = {
 	splitbelow = true, -- Horizontal split to the bottom
 	termguicolors = true, -- Enable 24-bit RGB colors
 	laststatus = 3, -- Set global statusline
-	cursorline = true, -- Cursorline on
 	pumheight = 15, -- pop up menu height
 
 	-- Tabs, indent
