@@ -73,7 +73,6 @@ return packer.startup(function(use)
 	})
 
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
-	use({ "kylechui/nvim-surround" }) -- quick surround
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
 	use({ "wakatime/vim-wakatime" }) --wakatime
@@ -81,7 +80,7 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "phaazon/hop.nvim" }) -- clever s
-	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent:W
+	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent/surround
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
