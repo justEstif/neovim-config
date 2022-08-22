@@ -70,3 +70,11 @@ mini_comment.setup({
 		end,
 	},
 })
+
+-- Mini surround
+local status_surround, mini_surround = pcall(require, "mini.surround")
+if not status_surround then
+	return
+end
+
+mini_surround.setup({})
