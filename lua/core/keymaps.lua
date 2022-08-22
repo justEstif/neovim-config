@@ -86,7 +86,7 @@ map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in curre
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
-map({"n", "v"}, 's', ":HopChar2<CR>") -- sneak s
+map({"n", "v"}, 'S', ":HopChar2<CR>") -- sneak s
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
