@@ -31,10 +31,14 @@ telescope.setup({
 				["<C-k>"] = actions.move_selection_previous, -- previous item
 				["<C-?>"] = actions.which_key, -- available keys
 				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
+				["<C-f>"] = actions.preview_scrolling_up,
+				["<C-d>"] = actions.preview_scrolling_down,
 			},
 			n = {
 				["<C-?>"] = actions.which_key, -- see options
 				["<C-w>"] = actions_layout.toggle_preview, -- toggle preview
+				["<C-f>"] = actions.preview_scrolling_up,
+				["<C-d>"] = actions.preview_scrolling_down,
 			},
 		},
 
@@ -78,16 +82,18 @@ telescope.setup({
 			mappings = { -- easy close buffer shortcut
 				i = {
 					["<C-d>"] = actions.delete_buffer,
+					["<C-b>"] = actions.close, -- exit
 				},
 				n = {
 					["D"] = actions.delete_buffer,
 					["<C-d>"] = actions.delete_buffer,
+					["<C-b>"] = actions.close, -- exit
 				},
 			},
 		},
 	},
 	extensions = {
-    file_browser = require("plugins.telescope.file-browser")
-  },
+		file_browser = require("plugins.telescope.file-browser"),
+	},
 })
-telescope.load_extension "file_browser"
+telescope.load_extension("file_browser")
