@@ -20,7 +20,7 @@ vim.g.mapleader = ","
 -----------------------------------------------------------
 
 -- disable keys
-local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL" }
+local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "<C-u>", "<C-b>"}
 for _, disable_key in pairs(disable_keys) do
 	map("", disable_key, "<nop>")
 end
@@ -31,6 +31,7 @@ map({ "n", "v" }, "L", "$") -- L to go to the end of line(n)
 map({ "n", "v" }, "K", "{") -- L to jump next blocks(n)
 map({ "n", "v" }, "J", "}") -- J to jump previous blocks(n)
 map({ "n", "v" }, "<leader>j", "gJ") -- leader j to join lines(n)
+map({ "n", "v" }, "<C-f>", "<C-u>") -- move half up
 
 map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
 map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
@@ -48,7 +49,6 @@ map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
 map("n", "<leader>bn", ":bn<CR>") -- next buffer(n)
 map("n", "<leader>bp", ":bp<CR>") -- previous buffer(n)
 map("n", "<leader>bk", ":lua MiniBufremove.delete()<cr>") -- delete current buffer
-map("n", "<leader>bl", ":Telescope buffers<CR>") -- list all buffers
 
 -- Window
 map("n", "<C-k>", "<C-w>k") -- window up
@@ -86,7 +86,8 @@ map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in curre
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
-map({"n", "v"}, 'ss', ":HopChar2<CR>") -- sneak s
+map("n", "<C-b>", ":Telescope buffers<CR>") -- list all buffers
+map({ "n", "v" }, "ss", ":HopChar2<CR>") -- sneak s
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
