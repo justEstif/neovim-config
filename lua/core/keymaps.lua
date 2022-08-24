@@ -31,7 +31,6 @@ map({ "n", "v" }, "H", "_") -- H to go the start of line(n)
 map({ "n", "v" }, "L", "$") -- L to go to the end of line(n)
 map({ "n", "v" }, "K", "{") -- L to jump next blocks(n)
 map({ "n", "v" }, "J", "}") -- J to jump previous blocks(n)
-map({ "n", "v" }, "<leader>j", "gJ") -- leader j to join lines(n)
 map({ "n", "v" }, "<C-f>", "<C-u><Esc>") -- move half up/turn off f
 
 -- Lines
