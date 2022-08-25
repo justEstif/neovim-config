@@ -20,7 +20,7 @@ vim.g.mapleader = ","
 -----------------------------------------------------------
 
 -- disable keys
-local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "<C-u>", "<C-b>" }
+local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "<C-u>", "<C-b>", "<C-e>" }
 for _, disable_key in pairs(disable_keys) do
 	map("", disable_key, "<nop>")
 end
@@ -32,6 +32,7 @@ map({ "n", "v" }, "L", "$") -- L to go to the end of line(n)
 map({ "n", "v" }, "K", "{") -- L to jump next blocks(n)
 map({ "n", "v" }, "J", "}") -- J to jump previous blocks(n)
 map({ "n", "v" }, "<C-f>", "<C-u><Esc>") -- move half up/turn off f
+map({ "n", "v" }, "<C-u>", "<C-e>") -- scroll with C-u anc C-y
 
 -- Lines
 map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
