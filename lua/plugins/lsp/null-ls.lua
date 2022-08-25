@@ -15,8 +15,7 @@ local code_actions = null_ls.builtins.code_actions
 null_ls.setup({
 	debug = true,
 	sources = {
-		formatting.prettier,
-		code_actions.eslint,
+		code_actions.eslint_d,
 		diagnostics.stylelint, -- css
 		formatting.stylua, -- lua
 		formatting.rustywind, -- tailwind
