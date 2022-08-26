@@ -15,7 +15,7 @@ null_ls.setup({
 	debug = true,
 	sources = {
 		formatting.prettier.with({ extra_args = { "--no-semi" } }), -- prettier
-		diagnostics.eslint_d, -- eslint
+		diagnostics.eslint, -- eslint
 		diagnostics.stylelint, -- css
 		formatting.stylua, -- lua
 		formatting.rustywind, -- tailwind
