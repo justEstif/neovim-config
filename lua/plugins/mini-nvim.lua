@@ -21,12 +21,7 @@ if not status_pair then
 	return
 end
 
-mini_pairs.setup({
-	mappings = {
-		["<"] = { action = "open", pair = "<>", neigh_pattern = "[^\\]." },
-		[">"] = { action = "close", pair = "<>", neigh_pattern = "[^\\]." },
-	},
-})
+mini_pairs.setup({})
 
 -- Mini tabline
 local status_tabline, mini_tabline = pcall(require, "mini.tabline")
