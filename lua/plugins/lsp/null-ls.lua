@@ -14,7 +14,7 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	debug = true,
 	sources = {
-		formatting.prettier, -- prettier
+		formatting.prettier.with({ extra_args = { "--no-semi" } }), -- prettier
 		diagnostics.eslint_d, -- eslint
 		diagnostics.stylelint, -- css
 		formatting.stylua, -- lua
