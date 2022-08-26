@@ -45,6 +45,7 @@ telescope.setup({
 		file_ignore_patterns = { -- ignore these files
 			"node_modules/.*",
 			".git/.*",
+			".next/.*",
 		},
 		layout_strategy = "flex", -- display: flex;
 	},
