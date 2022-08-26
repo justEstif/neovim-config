@@ -85,7 +85,6 @@ telescope.setup({
 					["<C-b>"] = actions.close, -- exit
 				},
 				n = {
-					["D"] = actions.delete_buffer,
 					["<C-d>"] = actions.delete_buffer,
 					["<C-b>"] = actions.close, -- exit
 				},
