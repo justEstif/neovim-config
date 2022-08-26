@@ -14,8 +14,8 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	debug = true,
 	sources = {
-		formatting.prettier,
-		diagnostics.eslint_d,
+		formatting.prettier, -- prettier
+		diagnostics.eslint_d, -- eslint
 		diagnostics.stylelint, -- css
 		formatting.stylua, -- lua
 		formatting.rustywind, -- tailwind
