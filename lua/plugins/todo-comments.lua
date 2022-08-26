@@ -7,6 +7,13 @@ if not status_ok then
 	return
 end
 
+-- HACK: Fix cmd line bug
+local hl = require("todo-comments.highlight")
+local highlight_win = hl.highlight_win
+hl.highlight_win = function(win, force)
+	pcall(highlight_win, win, force)
+end
+
 todo_comments.setup({
 	highlight = {
 		keyword = "bg", -- "fg", "bg", "wide" or empty.
