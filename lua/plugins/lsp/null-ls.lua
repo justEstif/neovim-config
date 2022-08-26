@@ -12,7 +12,7 @@ local diagnostics = null_ls.builtins.diagnostics
 local completion = null_ls.builtins.completion
 
 null_ls.setup({
-	debug = true,
+	debug = false,
 	sources = {
 		formatting.prettier.with({ extra_args = { "--no-semi" } }), -- prettier
 		diagnostics.eslint, -- eslint
