@@ -1,41 +1,30 @@
 # Neovim Config
 
-- Features:
+## Supports
 
-  - LSP:
-    - comes with:
-      - html,
-      - cssls,
-      - tsserver,
-      - sumneko_lua,
-      - jsonls,
-      - tailwindcss
-    - easily extendible
-  - Formatting using Null-ls:
-		- prettier, - TS/JS
-		- eslint, - TS/JS
-		- stylelint, - css
-		- stylua, - lua
-		- rustywind, -- tailwind
-  - Code completion using CMP:
-     - nvim_lsp - LSP completion,
-     - luasnip - snippets,
-     - path - path,
-     - buffer - active buffer,
-     - nvim_lua - nvim cmp,
-  - C-p using Telescope
-    - and other telescope features
+- JS/TS/React
+- HTML/CSS/TailwindCSS
+- Lua
+- JSON
+- Easily Extendible
 
-- Great JS/TS support:
-  - LSP, formatting, snippets, tailwindcss
-  - JSX comments, html tag completion
+## IDE Plugins Tools
 
-- Comes with a lot of great plugins, and easy to add or remove plugins
-- I have commented often, so most of the code is easy to understand.
+- Null-ls: Formatter
+- Prettier
+- LSP: with completion and snippets
+- Telescope
 
-- Inspired by:
+## Other Plugins
 
-  - <https://github.com/brainfucksec/neovim-lua>
-  - <https://github.com/LunarVim/Neovim-from-scratch/>
-  - <https://github.com/doomemacs/doomemacs>
+- Sneak s + Better f/t
+- Toggleterm
+- Todo-comments highlighting
+- React: comments, html tags suport
+- Heavily uses mini.nvim to avoid bloat
 
+## Acknowledgment
+
+- [KISS Nvim Lua](https://github.com/brainfucksec/neovim-lua)
+- [LunarVim from Scratch](https://github.com/LunarVim/Neovim-from-scratch/)
+- [Doom Emacs](https://github.com/doomemacs/doomemacs)
