@@ -29,9 +29,7 @@ if not status_tabline then
 	return
 end
 
-mini_tabline.setup({
-	show_icons = false,
-})
+mini_tabline.setup({})
 
 -- Mini indent
 local status_indentscope, mini_indentscope = pcall(require, "mini.indentscope")
