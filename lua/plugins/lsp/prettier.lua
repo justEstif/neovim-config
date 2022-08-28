@@ -22,5 +22,6 @@ prettier.setup({
 	cli_options = {
 		semi = false,
 		bracket_same_line = true,
+		trailing_comma = "none",
 	},
 })
