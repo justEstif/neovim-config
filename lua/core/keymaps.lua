@@ -93,6 +93,13 @@ map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 
+-- Gitsigns
+map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
+map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>")
+map("n", "<leader>gS", ":Gitsigns stage_buffer<CR>")
+map("n", "<leader>gR", ":Gitsigns reset_buffer<CR>")
+map("n", "<leader>gc", ":Telescope gitmoji<CR>")
+
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
