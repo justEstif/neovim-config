@@ -94,11 +94,10 @@ map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 
 -- Gitsigns
-map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
-map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>")
-map("n", "<leader>gS", ":Gitsigns stage_buffer<CR>")
-map("n", "<leader>gR", ":Gitsigns reset_buffer<CR>")
-map("n", "<leader>gc", ":Telescope gitmoji<CR>")
+map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>") -- stage hunk(group)
+map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>") -- reset staged hunk
+map("n", "<leader>gS", ":Gitsigns stage_buffer<CR>") -- stage current git buf
+map("n", "<leader>gR", ":Gitsigns reset_buffer<CR>") -- reset staged in current buffer
 
 -- other keybindings in:
 -- plugins.lsp/handlers
