@@ -93,7 +93,10 @@ telescope.setup({
 		},
 		git_status = { -- git status settings
 			initial_mode = "normal",
-			layout_config = { height = 0.9, preview_width = 0.75 },
+			layout_config = { -- improved git diff view
+				height = 0.9,
+				preview_width = 0.75,
+			},
 		},
 	},
 	extensions = {
