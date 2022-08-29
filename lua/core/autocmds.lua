@@ -68,3 +68,9 @@ autocmd("TermOpen", {
 	pattern = "*",
 	command = "setlocal statusline=%{b:term_title}",
 })
+
+autocmd("Filetype", {
+	group = "setLineLength",
+	pattern = { "text", "markdown"},
+	command = "setlocal linebreak wrap spell",
+})
