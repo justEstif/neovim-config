@@ -77,7 +77,6 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
-	use({ "wakatime/vim-wakatime" }) --wakatime
 	use({ "kyazdani42/nvim-web-devicons" }) -- icons
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
