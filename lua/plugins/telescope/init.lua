@@ -91,10 +91,12 @@ telescope.setup({
 				},
 			},
 		},
-    git_status = { -- git status settings
-      theme = "ivy",
-      initial_mode = 'normal'
-    }
+		git_status = { -- git status settings
+			theme = "ivy",
+			initial_mode = "normal",
+			layout_strategy = "center",
+			layout_config = { height = 0.1 },
+		},
 	},
 	extensions = {
 		file_browser = require("plugins.telescope.file-browser"),
