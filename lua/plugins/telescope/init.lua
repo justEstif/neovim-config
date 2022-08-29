@@ -92,10 +92,8 @@ telescope.setup({
 			},
 		},
 		git_status = { -- git status settings
-			theme = "ivy",
 			initial_mode = "normal",
-			layout_strategy = "center",
-			layout_config = { height = 0.1 },
+			layout_config = { height = 0.9, preview_width = 0.75 },
 		},
 	},
 	extensions = {
