@@ -44,7 +44,9 @@ autocmd("Filetype", {
 })
 
 -- Save folds on exit
-augroup("AutoSaveFolds", {})
+augroup("AutoSaveFolds", {
+  clear = true
+})
 autocmd("BufWinLeave", {
 	group = "AutoSaveFolds",
 	pattern = "*",
@@ -69,8 +71,11 @@ autocmd("TermOpen", {
 	command = "setlocal statusline=%{b:term_title}",
 })
 
+augroup("setMarkdownWrap", {
+	clear = true,
+})
 autocmd("Filetype", {
-	group = "setLineLength",
+	group = "setMarkdownWrap",
 	pattern = { "text", "markdown"},
 	command = "setlocal linebreak wrap spell",
 })
