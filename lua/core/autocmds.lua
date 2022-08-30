@@ -37,6 +37,7 @@ autocmd("BufEnter", {
 augroup("setLineLength", {
 	clear = true,
 })
+
 autocmd("Filetype", {
 	group = "setLineLength",
 	pattern = { "text", "markdown", "html", "xhtml", "javascript", "typescript" },
@@ -47,11 +48,13 @@ autocmd("Filetype", {
 augroup("AutoSaveFolds", {
   clear = true
 })
+
 autocmd("BufWinLeave", {
 	group = "AutoSaveFolds",
 	pattern = "*",
 	command = "silent! mkview",
 })
+
 -- Load folds on start
 autocmd("BufWinEnter", {
 	group = "AutoSaveFolds",
@@ -71,6 +74,7 @@ autocmd("TermOpen", {
 	command = "setlocal statusline=%{b:term_title}",
 })
 
+-- turn on wrap and spelling in markdown
 augroup("setMarkdownWrap", {
 	clear = true,
 })
