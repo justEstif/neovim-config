@@ -92,13 +92,10 @@ map("n", "<C-b>", ":Telescope buffers<CR>") -- list all buffers
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
-map("n", "<leader>gd", ":Telescope git_status<CR>") -- telescope changes/diff view
 
 -- Gitsigns
 map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>") -- stage hunk(group)
 map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>") -- reset staged hunk
-map("n", "<leader>gS", ":Gitsigns stage_buffer<CR>") -- stage current git buf
-map("n", "<leader>gR", ":Gitsigns reset_buffer<CR>") -- reset staged in current buffer
 
 -- other keybindings in:
 -- plugins.lsp/handlers
