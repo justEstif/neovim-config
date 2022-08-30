@@ -54,7 +54,6 @@ return packer.startup(function(use)
 	use({
 		"nvim-telescope/telescope.nvim", -- telescope
 		"nvim-telescope/telescope-file-browser.nvim", -- telescope file browser
-		"olacin/telescope-gitmoji.nvim", -- gitmoji
 		branch = "0.1.x",
 		requires = "nvim-lua/plenary.nvim",
 	})
@@ -73,7 +72,10 @@ return packer.startup(function(use)
 		"lewis6991/gitsigns.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
-
+	use({ -- Git client
+		"TimUntersberger/neogit",
+		requires = "nvim-lua/plenary.nvim",
+	})
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
