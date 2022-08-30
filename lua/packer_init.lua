@@ -72,10 +72,12 @@ return packer.startup(function(use)
 		"lewis6991/gitsigns.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
+
 	use({ -- Git client
 		"TimUntersberger/neogit",
 		requires = "nvim-lua/plenary.nvim",
 	})
+
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments
