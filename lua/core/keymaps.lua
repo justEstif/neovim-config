@@ -73,6 +73,7 @@ map("v", ">", ">gv") -- stay in indent mode
 
 -- Others
 map("v", "p", '"_dP') -- keep the yanked when pasting in visual mode
+map("v", "@", ":normal @") -- apply macro on visual range
 map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
 map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
@@ -85,6 +86,8 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 
 -- Hop
 map({ "n", "v" }, "ss", ":HopChar2<CR>") -- sneak s
+map({ "n", "v" }, "mw", ":HopWordCurrentLine<CR>") -- Jump word on current line
+map({ "n", "v" }, "ml", ":HopLine<CR>") -- Jump to visible line on buffer
 
 -- Telescope
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
@@ -97,6 +100,7 @@ map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in curre
 map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>") -- stage hunk(group)
 map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>") -- reset staged hunk
 
+map("n", "<leader>zz", ":TZAtaraxis<CR>") -- Zenmode
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp

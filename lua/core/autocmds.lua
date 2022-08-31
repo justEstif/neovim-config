@@ -46,7 +46,7 @@ autocmd("Filetype", {
 
 -- Save folds on exit
 augroup("AutoSaveFolds", {
-  clear = true
+	clear = true,
 })
 
 autocmd("BufWinLeave", {
@@ -80,6 +80,6 @@ augroup("setMarkdownWrap", {
 })
 autocmd("Filetype", {
 	group = "setMarkdownWrap",
-	pattern = { "text", "markdown"},
+	pattern = { "text", "markdown" },
 	command = "setlocal linebreak wrap spell",
 })

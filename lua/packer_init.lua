@@ -86,6 +86,7 @@ return packer.startup(function(use)
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "phaazon/hop.nvim" }) -- clever s
 	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent/surround
+	use({ "Pocco81/true-zen.nvim" }) -- zen mode
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
