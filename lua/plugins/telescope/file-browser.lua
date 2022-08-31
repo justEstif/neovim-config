@@ -4,11 +4,22 @@ if not actions_status_ok then
 end
 
 local file_browser = {
-	theme = "ivy",
+	theme = "dropdown",
+	previewer = false,
 	initial_mode = "normal",
 	path = "%:p:h", -- open the file_browser from within the folder of your current buffer
 	grouped = true, -- group files and dir separately
 	sorting_strategy = "ascending", -- show dir first
+
+	layout_strategy = "center",
+	results_title = false,
+	layout_config = {
+		center = {
+			width = 0.6,
+			height = 0.7,
+		},
+	},
+
 	mappings = {
 		["i"] = {
 			["<C-n>"] = actions.close, -- exit
