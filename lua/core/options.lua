@@ -9,7 +9,7 @@ local options = {
 	-- General
 	mouse = "a", -- Enable mouse support
 	clipboard = "unnamedplus", -- Copy/paste to system clipboard
-	swapfile = false, -- Don't use swapfile
+	swapfile = false, -- Don't modify file open in another nvim processs
 	completeopt = "menuone,noinsert,noselect", -- Autocomplete options
 
 	-- Search
@@ -37,6 +37,7 @@ local options = {
 	termguicolors = true, -- Enable 24-bit RGB colors
 	laststatus = 3, -- Set global statusline
 	pumheight = 15, -- pop up menu height
+	showtabline = 0,
 
 	-- Tabs, indent
 	expandtab = true, -- Use spaces instead of tabs

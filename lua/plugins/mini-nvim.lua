@@ -23,14 +23,6 @@ end
 
 mini_pairs.setup({})
 
--- Mini tabline
-local status_tabline, mini_tabline = pcall(require, "mini.tabline")
-if not status_tabline then
-	return
-end
-
-mini_tabline.setup({})
-
 -- Mini indent
 local status_indentscope, mini_indentscope = pcall(require, "mini.indentscope")
 if not status_indentscope then
