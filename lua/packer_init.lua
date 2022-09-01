@@ -73,11 +73,7 @@ return packer.startup(function(use)
 		requires = "nvim-lua/plenary.nvim",
 	})
 
-	use({ -- Git client
-		"TimUntersberger/neogit",
-		requires = "nvim-lua/plenary.nvim",
-	})
-
+	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
 	use({ "feline-nvim/feline.nvim" }) -- statusline
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" }) -- jsx comments

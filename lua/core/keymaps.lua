@@ -101,7 +101,7 @@ map("n", "<leader>zz", ":TZAtaraxis<CR>") -- toggle
 -- Gitsigns
 map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>") -- stage hunk(group)
 map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>") -- reset staged hunk
-map({ "n", "v" }, "<leader>gd", ":Gitsigns diffthis<CR>") -- reset staged hunk
+
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
