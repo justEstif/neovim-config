@@ -86,21 +86,22 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
 
 -- Hop
 map({ "n", "v" }, "ss", ":HopChar2<CR>") -- sneak s
-map({ "n", "v" }, "mw", ":HopWordCurrentLine<CR>") -- Jump word on current line
-map({ "n", "v" }, "ml", ":HopLine<CR>") -- Jump to visible line on buffer
+map({ "n", "v" }, "mw", ":HopWord<CR>") -- Jump to word on current visible buffer
 
 -- Telescope
-map("n", "mS", ":Telescope live_grep<CR>") -- find text in directory
-map("n", "<C-b>", ":Telescope buffers<CR>") -- list all buffers
-map("n", "<C-p>", ":Telescope find_files<CR>") -- find file
+map("n", "<C-b>", ":Telescope buffers<CR>") -- list all open buffers
+map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
+map("n", "mS", ":Telescope live_grep<CR>") -- find text in current dir
+
+-- Zen mode
+map("n", "<leader>zz", ":TZAtaraxis<CR>") -- toggle
 
 -- Gitsigns
 map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>") -- stage hunk(group)
 map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>") -- reset staged hunk
-
-map("n", "<leader>zz", ":TZAtaraxis<CR>") -- Zenmode
+map({ "n", "v" }, "<leader>gd", ":Gitsigns diffthis<CR>") -- reset staged hunk
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
