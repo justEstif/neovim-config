@@ -68,12 +68,6 @@ autocmd("TermOpen", {
 	command = "setlocal nonumber norelativenumber",
 })
 
--- more readable terminal name
-autocmd("TermOpen", {
-	pattern = "*",
-	command = "setlocal statusline=%{b:term_title}",
-})
-
 -- turn on wrap and spelling in markdown
 augroup("setMarkdownWrap", {
 	clear = true,
