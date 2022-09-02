@@ -62,4 +62,6 @@ if not status_surround then
 	return
 end
 
-mini_surround.setup({})
+mini_surround.setup({
+	n_lines = 50,
+})
