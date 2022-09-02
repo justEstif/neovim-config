@@ -53,12 +53,6 @@ map("n", "<leader>bp", ":bp<CR>") -- previous buffer(n)
 map("n", "<leader>bk", ":lua MiniBufremove.delete()<cr>") -- delete current buffer
 map("n", "<leader>q", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
 
--- Window
-map("n", "<C-k>", "<C-w>k") -- window up
-map("n", "<C-h>", "<C-w>h") -- window left
-map("n", "<C-j>", "<C-w>j") -- window down
-map("n", "<C-l>", "<C-w>l") -- window right
-
 -- Resize with arrows
 map("n", "<C-Up>", ":resize -2<CR>")
 map("n", "<C-Down>", ":resize +2<CR>")
@@ -77,16 +71,15 @@ map("v", "@", ":normal @") -- apply macro on visual range
 map("t", "<Esc>", [[<C-\><C-n>]]) -- esc exit terminal
 map("n", "<Esc>", ":nohl<CR>") -- clear search highlights
 map("n", "<leader>r", ":so %<CR>") -- Reload configuration without restart nvim
--- open link under cursor
-map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>")
+map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- open link under cursor
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
 
 -- Hop
-map({ "n", "v" }, "ss", ":HopChar2<CR>") -- sneak s
-map({ "n", "v" }, "mw", ":HopWord<CR>") -- Jump to word on current visible buffer
+map({ "n", "v" }, "ss", ":HopChar2MW<CR>") -- sneak s
+map({ "n", "v" }, "mw", ":HopWordCurrentLine<CR>") -- Jump to word on current visible buffer
 
 -- Telescope
 map("n", "<C-b>", ":Telescope buffers<CR>") -- list all open buffers
