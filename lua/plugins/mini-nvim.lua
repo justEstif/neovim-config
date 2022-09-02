@@ -31,7 +31,7 @@ end
 
 mini_indentscope.setup({
 	draw = { delay = 0 },
-	symbol = "𑗄",
+	symbol = "|",
 })
 
 -- Mini bufremove
