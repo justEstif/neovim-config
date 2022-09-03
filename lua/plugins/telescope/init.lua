@@ -46,6 +46,7 @@ telescope.setup({
 			"node_modules/.*",
 			".git/.*",
 			".next/.*",
+			"dist/.*",
 		},
 		layout_strategy = "flex", -- display: flex;
 	},
