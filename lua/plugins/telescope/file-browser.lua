@@ -4,17 +4,15 @@ if not actions_status_ok then
 end
 
 local file_browser = {
-	theme = "dropdown",
-	previewer = false,
 	initial_mode = "normal",
 	path = "%:p:h", -- open the file_browser from within the folder of your current buffer
 	grouped = true, -- group files and dir separately
 	sorting_strategy = "ascending", -- show dir first
 
-	layout_strategy = "center",
-	results_title = false,
+  results_title = false,
+	layout_strategy = "horizontal",
 	layout_config = {
-		center = {
+		horizontal = {
 			width = 0.6,
 			height = 0.7,
 		},
