@@ -10,11 +10,13 @@ end
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local completion = null_ls.builtins.completion
+local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
 	debug = false,
 	sources = {
-		diagnostics.eslint, -- eslint
+		formatting.prettier_d_slim, -- prettier
+		code_actions.eslint_d, -- eslint
 		diagnostics.stylelint, -- css
 		formatting.stylua, -- lua
 		formatting.rustywind, -- tailwind
