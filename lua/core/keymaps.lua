@@ -20,7 +20,7 @@ vim.g.mapleader = ","
 -----------------------------------------------------------
 
 -- disable keys
-local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "<C-u>", "<C-b>", "<C-e>" }
+local disable_keys = { "<up>", "<left>", "<down>", "<right>", "gh", "gl", "gL", "<C-f>", "<C-b>", "<C-e>", "<C-y>" }
 for _, disable_key in pairs(disable_keys) do
 	map("", disable_key, "<nop>")
 end
@@ -31,8 +31,6 @@ map({ "n", "v" }, "H", "_") -- H to go the start of line(n)
 map({ "n", "v" }, "L", "$") -- L to go to the end of line(n)
 map({ "n", "v" }, "K", "{") -- L to jump next blocks(n)
 map({ "n", "v" }, "J", "}") -- J to jump previous blocks(n)
-map({ "n", "v" }, "<C-f>", "<C-u><Esc>") -- move half up/turn off f
-map({ "n", "v" }, "<C-u>", "<C-e>") -- scroll with C-u anc C-y
 
 -- Lines
 map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
@@ -48,8 +46,6 @@ map("n", "<leader>to", ":tabonly<CR>") -- kill all other tabs
 map("n", "<leader>tk", ":tabclose<CR>") -- kill current tab
 
 -- Buffers
-map("n", "<leader>bn", ":bn<CR>") -- next buffer(n)
-map("n", "<leader>bp", ":bp<CR>") -- previous buffer(n)
 map("n", "<leader>bk", ":lua MiniBufremove.delete()<cr>") -- delete current buffer
 map("n", "<leader>q", ":bufdo bdelete<CR>:Alpha<CR>") -- kill all buffers
 
