@@ -1,3 +1,7 @@
+-----------------------------------------------------------
+-- Prettier configuration file
+----------------------------------------------------------
+
 local status, prettier = pcall(require, "prettier")
 if not status then
 	return

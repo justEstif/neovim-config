@@ -16,7 +16,7 @@ end
 
 todo_comments.setup({
 	highlight = {
-		keyword = "bg", -- "fg", "bg", "wide" or empty.
+		keyword = "wide", -- "fg", "bg", "wide" or empty.
 	},
 	keywords = {
 		IDEA = { icon = "", color = "hint" },
