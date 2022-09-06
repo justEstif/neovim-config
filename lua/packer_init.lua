@@ -72,6 +72,7 @@ return packer.startup(function(use)
 		"lewis6991/gitsigns.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
+
 	use({ "tpope/vim-abolish" }) -- search/abbrevation/var rename
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags

@@ -85,5 +85,11 @@ for _, plugin in pairs(disabled_built_ins) do
 	g["loaded_" .. plugin] = 1
 end
 
--- Other options
-opt.shortmess:append("sI") -- Disable nvim intro
+local options_append = {
+	shortmess = "sI", -- Disable nvim intro
+	path = "**", -- makes :find === <C-p>
+}
+
+for k, v in pairs(options_append) do
+	opt[k]:append(v)
+end
