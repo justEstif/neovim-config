@@ -39,6 +39,7 @@ return packer.startup(function(use)
 		"williamboman/nvim-lsp-installer", -- lsp installer
 		"jose-elias-alvarez/typescript.nvim", -- ts config
 		"jose-elias-alvarez/null-ls.nvim", -- formatter
+		"MunifTanjim/prettier.nvim", -- prettier
 	})
 
 	use({ -- completion/cmp
