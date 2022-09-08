@@ -67,13 +67,3 @@ autocmd("TermOpen", {
 	pattern = "*",
 	command = "setlocal nonumber norelativenumber",
 })
-
--- turn on wrap and spelling in markdown
-augroup("setMarkdownWrap", {
-	clear = true,
-})
-autocmd("Filetype", {
-	group = "setMarkdownWrap",
-	pattern = { "text", "markdown" },
-	command = "setlocal linebreak wrap spell",
-})
