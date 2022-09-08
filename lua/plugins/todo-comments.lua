@@ -7,7 +7,7 @@ if not status_ok then
 	return
 end
 
--- HACK: Fix cmd line bug
+-- HACK Fix cmd line bug
 local hl = require("todo-comments.highlight")
 local highlight_win = hl.highlight_win
 hl.highlight_win = function(win, force)
@@ -17,6 +17,10 @@ end
 todo_comments.setup({
 	highlight = {
 		keyword = "wide", -- "fg", "bg", "wide" or empty.
+		pattern = [[.*<(KEYWORDS)\s*]], -- No colon required
+	},
+	search = {
+		pattern = [[.*<(KEYWORDS)\s*]], -- No colon required
 	},
 	keywords = {
 		IDEA = { icon = "", color = "hint" },
