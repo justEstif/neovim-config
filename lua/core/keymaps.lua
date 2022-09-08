@@ -84,13 +84,6 @@ map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
 map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in current dir
 
--- Zen mode
-map("n", "<leader>zz", ":TZAtaraxis<CR>") -- toggle
-
--- Gitsigns
-map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>") -- stage hunk(group)
-map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>") -- reset staged hunk
-
 -- other keybindings in:
 -- plugins.lsp/handlers
 -- plugins.nvim-cmp
