@@ -19,7 +19,6 @@ null_ls.setup({
 		code_actions.eslint_d, -- eslint
 		diagnostics.stylelint, -- css
 		formatting.stylua, -- lua
-		formatting.rustywind, -- tailwind
 		completion.spell.with({
 			filetypes = { "markdown" },
 		}),
