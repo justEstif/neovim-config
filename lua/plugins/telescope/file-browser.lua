@@ -8,6 +8,7 @@ local file_browser = {
 	path = "%:p:h", -- open the file_browser from within the folder of your current buffer
 	grouped = true, -- group files and dir separately
 	sorting_strategy = "ascending", -- show dir first
+	previewer = false,
 
   results_title = false,
 	layout_strategy = "horizontal",
