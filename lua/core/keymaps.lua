@@ -76,6 +76,7 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 -- Hop
 map({ "n", "v" }, "ss", ":HopChar2MW<CR>") -- sneak s
 map({ "n", "v" }, "mw", ":HopWordCurrentLine<CR>") -- Jump to word on current visible buffer
+map({ "n", "v" }, "ml", ":HopLineMW<CR>") -- Jump to line on visible buffers and windows
 
 -- Telescope
 map("n", "<C-b>", ":Telescope buffers<CR>") -- list all open buffers
