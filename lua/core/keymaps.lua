@@ -76,8 +76,6 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 -- Hop
 map({ "n", "v" }, "ss", ":HopChar2MW<CR>") -- sneak s
 map({ "n", "v" }, "mw", ":HopWord<CR>") -- Jump to word on current visible buffer
-map({ "n", "v" }, "f", ":HopChar1CurrentLine<CR>") -- Jump to word on current visible buffer
-map({ "n", "v" }, "t", "<cmd>lua require'hop'.hint_char1({  hint_offset = -1 })<CR>")
 
 -- Telescope
 map("n", "<C-b>", ":Telescope buffers<CR>") -- list all open buffers
