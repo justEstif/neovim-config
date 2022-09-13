@@ -75,14 +75,14 @@ map("n", "gx", "<cmd>silent execute '!open ' . shellescape('<cWORD>')<CR>") -- o
 
 -- Hop
 map({ "n", "v" }, "ss", ":HopChar2MW<CR>") -- sneak s
-map({ "n", "v" }, "mw", ":HopWordCurrentLine<CR>") -- Jump to word on current visible buffer
-map({ "n", "v" }, "ml", ":HopLineMW<CR>") -- Jump to line on visible buffers and windows
+map({ "n", "v" }, "mw", ":HopWord<CR>") -- Jump to word on current visible buffer
+map({ "n", "v" }, "f", ":HopChar1CurrentLine<CR>") -- Jump to word on current visible buffer
+map({ "n", "v" }, "t", "<cmd>lua require'hop'.hint_char1({  hint_offset = -1 })<CR>")
 
 -- Telescope
 map("n", "<C-b>", ":Telescope buffers<CR>") -- list all open buffers
 map("n", "<C-p>", ":Telescope find_files<CR>") -- find file in dir
 map("n", "<C-n>", ":Telescope file_browser<CR>") -- open/close file browser
-map("n", "ms", ":Telescope current_buffer_fuzzy_find<CR>") -- find text in current file
 map("n", "mS", ":Telescope live_grep<CR>") -- find text in current dir
 
 -- other keybindings in:
@@ -90,4 +90,3 @@ map("n", "mS", ":Telescope live_grep<CR>") -- find text in current dir
 -- plugins.nvim-cmp
 -- plugins.telescope/file-explorer
 -- plugins.toggleterm -> <C-t>
--- plugins.mini -> remapped f/F/t/T/
