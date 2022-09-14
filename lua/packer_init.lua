@@ -59,20 +59,9 @@ return packer.startup(function(use)
 		requires = "nvim-lua/plenary.nvim",
 	})
 
-	use({ -- todo comment highlighting
-		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
-	})
-
-	use({ -- dashboard
-		"goolord/alpha-nvim",
-		requires = "kyazdani42/nvim-web-devicons",
-	})
-
-	use({ -- git labels
-		"lewis6991/gitsigns.nvim",
-		requires = "nvim-lua/plenary.nvim",
-	})
+	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- todo comment highlighting
+	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
+	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 
 	use({ "tpope/vim-abolish" }) -- search/abbrevation/var rename
 	use({ "tpope/vim-fugitive" }) -- git client
