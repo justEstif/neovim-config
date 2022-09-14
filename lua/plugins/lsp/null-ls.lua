@@ -20,7 +20,7 @@ null_ls.setup({
 		diagnostics.stylelint, -- css
 		formatting.stylua, -- lua
 		completion.spell.with({
-			filetypes = { "markdown" },
+			filetypes = { "markdown", "gitcommit" },
 		}),
 	},
 })
