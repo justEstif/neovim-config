@@ -17,7 +17,6 @@ nvim_treesitter.setup({
 		"python",
 		"typescript",
 		"vim",
-		"comment",
 	},
 	sync_install = false,
 	highlight = {
