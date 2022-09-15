@@ -63,7 +63,7 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim", requires = "kyazdani42/nvim-web-devicons" }) -- dashboard
 	use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" }) -- git labels
 	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }) -- error viewer
-
+	use({ "kylechui/nvim-surround" }) -- surround
 	use({ "tpope/vim-abolish" }) -- search/abbrevation/var rename
 	use({ "tpope/vim-fugitive" }) -- git client
 	use({ "windwp/nvim-ts-autotag" }) -- autoclose and autorename html tags
@@ -73,7 +73,7 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim", tag = "v2.*" }) -- better terminal
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" }) -- colorscheme
 	use({ "phaazon/hop.nvim" }) -- clever s
-	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent/surround
+	use({ "echasnovski/mini.nvim" }) -- improved-f/tabline/indent
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
