@@ -9,6 +9,7 @@ end
 
 trouble.setup({
 	action_keys = {
-		close = { "<esc>", "q" },
+		close = {"<esc>", 'q'},
+		cancel = {},
 	},
 })
